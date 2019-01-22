@@ -1,25 +1,30 @@
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Button } from 'reactstrap';
-// import logo from './logo.svg';
-import './App.css';
+// import connection from '../helpers/data/connection';
+import MyNavbar from '../components/MyNavbar/MyNavbar';
+import Auth from '../components/Auth/Auth';
+import connection from '../helpers/data/connection';
+import './App.scss';
 
 class App extends Component {
+  state = {
+    authed: false,
+  }
+
+  componentDidMount() {
+    connection();
+  }
+
+  isAuthenticated = () => {
+    this.setState({ authed: true });
+  };
+
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <button className='btn btn-danger'>HELP ME</button>
-          <Button
-            tag="a"
-            color="success"
-            size="large"
-            href="http://reactstrap.github.io"
-            target="_blank"
-          >
-            View Reactstrap Docs
-          </Button>
-        </header>
+        <MyNavbar />
+        <Auth />
       </div>
     );
   }
