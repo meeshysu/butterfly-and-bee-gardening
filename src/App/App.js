@@ -5,7 +5,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import MyNavbar from '../components/MyNavbar/MyNavbar';
 import Auth from '../components/Auth/Auth';
 import connection from '../helpers/data/connection';
+import authRequests from '../helpers/data/authRequests';
 import './App.scss';
+
 
 class App extends Component {
   state = {
@@ -37,10 +39,25 @@ class App extends Component {
 
 
   render() {
+    const { authed } = this.state;
+    const logoutClickEvent = () => {
+      console.log('yassssss', logoutClickEvent);
+      authRequests.logoutUser();
+      this.setState({ authed: false });
+    };
+
+    if (!authed) {
+      return (
+        <div className="App">
+          <MyNavbar isAuthed={authed} logoutClickEvent={logoutClickEvent} />
+          <Auth isAuthenticated={this.isAuthenticated} />
+        </div>
+      );
+    }
+
     return (
       <div className="App">
-        <MyNavbar />
-        <Auth isAuthenticated={this.isAuthenticated} />
+        <MyNavbar isAuthed={this.state.authed} logoutClickEvent={logoutClickEvent} />
       </div>
     );
   }
