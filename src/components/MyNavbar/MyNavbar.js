@@ -1,7 +1,12 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './MyNavbar.scss';
 
 class MyNavbar extends React.Component {
+  static propTypes = {
+    isAuthed: PropTypes.bool,
+  }
+
   state = {
     isOpen: false,
   };
