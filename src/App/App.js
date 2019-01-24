@@ -1,15 +1,37 @@
-import React, { Component } from 'react';
+import React from 'react';
 import firebase from 'firebase/app';
+import 'firebase/auth';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import {
+  BrowserRouter,
+  Route,
+  Redirect,
+  Switch,
+} from 'react-router-dom';
 // import connection from '../helpers/data/connection';
 import MyNavbar from '../components/MyNavbar/MyNavbar';
 import Auth from '../components/Auth/Auth';
 import connection from '../helpers/data/connection';
 import authRequests from '../helpers/data/authRequests';
+import Gardens from '../components/pages/Gardens/Gardens';
+import Plants from '../components/pages/Plants/Plants';
 import './App.scss';
 
+const PublicRoute = ({ component: Component, authed, ...rest }) => {
+  const routeChecker = props => (authed === false
+    ? (<Component {...props} />)
+    : (< Redirect to={{ pathname: '/plants', state: { from: props.location } }} />));
+  return <Route {...rest} render={props => routeChecker(props)} />;
+};
+const PrivateRoute = ({ component: Component, authed, ...rest }) => {
 
-class App extends Component {
+  const routeChecker = props => (authed === true
+    ? (<Component {...props} />)
+    : (< Redirect to={{ pathname: '/auth', state: { from: props.location } }} />));
+  return <Route {...rest} render={props => routeChecker(props)} />;
+};
+
+class App extends React.Component {
   state = {
     authed: false,
   }
@@ -41,7 +63,6 @@ class App extends Component {
   render() {
     const { authed } = this.state;
     const logoutClickEvent = () => {
-      console.log('yassssss', logoutClickEvent);
       authRequests.logoutUser();
       this.setState({ authed: false });
     };
@@ -57,8 +78,21 @@ class App extends Component {
 
     return (
       <div className="App">
-        <MyNavbar isAuthed={this.state.authed} logoutClickEvent={logoutClickEvent} />
-      </div>
+        <BrowserRouter>
+          <React.Fragment>
+            <MyNavbar isAuthed={this.state.authed} logoutClickEvent={logoutClickEvent} />
+            <div className='container'>
+              <div className='row'>
+                <Switch>
+                  <Route path='/plants' component={Plants} />
+                  <PrivateRoute path='/gardens' component={Gardens} authed={this.state.authed} />
+                  <PublicRoute path='/auth' component={Auth} authed={this.state.authed} />
+                </Switch>
+              </div>
+            </div>
+          </React.Fragment>
+        </BrowserRouter>
+      </div >
     );
   }
 }
