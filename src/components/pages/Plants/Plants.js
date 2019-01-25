@@ -1,6 +1,6 @@
 import React from 'react';
-import connection from '../../../helpers/data/connection';
 import plantRequest from '../../../helpers/data/plantRequest';
+import PlantList from '../../PlantList/PlantList';
 import './Plants.scss';
 
 
@@ -10,7 +10,6 @@ class Plants extends React.Component {
   }
 
   componentDidMount() {
-    connection();
     plantRequest.getRequest()
       .then((plants) => {
         this.setState({ plants });
@@ -19,9 +18,10 @@ class Plants extends React.Component {
   }
 
   render() {
+    const { plants } = this.state;
     return (
       <div className='plantsPage mx-auto'>
-        <h3>Feast yo eyes on dese plants</h3>
+        <PlantList plants = {plants}/>
       </div>
     );
   }

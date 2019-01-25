@@ -1,12 +1,13 @@
 import PropTypes from 'prop-types';
 
-const propShape = PropTypes.shape({
-  image: PropTypes.string,
-  name: PropTypes.string,
-  size: PropTypes.string,
-  sun: PropTypes.string,
-  color: PropTypes.string,
-  description: PropTypes.string,
+const plantShape = PropTypes.shape({
+  id: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  size: PropTypes.string.isRequired,
+  sun: PropTypes.string.isRequired,
+  color: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
 });
 
-export default propShape;
+export default plantShape;
