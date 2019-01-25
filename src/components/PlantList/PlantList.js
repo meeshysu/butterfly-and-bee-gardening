@@ -22,10 +22,10 @@ class PlantList extends React.Component {
     ));
 
     return (
-      <div className='plants row'>
+      <span className='col'>
         <h2>Plants</h2>
         <p>{plantItemComponent}</p>
-      </div>
+      </span>
     );
   }
 }

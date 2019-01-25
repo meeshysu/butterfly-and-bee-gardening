@@ -18,9 +18,10 @@ class Plants extends React.Component {
   }
 
   render() {
+    const { plants } = this.state;
     return (
       <div className='plantsPage mx-auto'>
-        <PlantList />
+        <PlantList plants = {plants}/>
       </div>
     );
   }
