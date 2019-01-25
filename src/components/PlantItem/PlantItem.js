@@ -13,12 +13,12 @@ class PlantItem extends React.Component {
     return (
       <span className='row'>
         <span className='card-body'>
-          <span className='plant-image'>{plant.image}</span>
-          <span className='plant-name'>{plant.name}</span>
-          <span className='plant-size'>{plant.size}</span>
-          <span className='plant-sun'>{plant.sun}</span>
-          <span className='plant-color'>{plant.color}</span>
-          <span className='plant-description'>{plant.description}</span>
+          <img className='plant-image' src={plant.image} alt='plant'/>
+          <p className='plant-name'>{plant.name}</p>
+          <p className='plant-size'>{plant.size}</p>
+          <p className='plant-sun'>{plant.sun}</p>
+          <p className='plant-color'>{plant.color}</p>
+          <p className='plant-description'>{plant.description}</p>
         </span>
       </span>
     );
