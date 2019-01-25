@@ -1,26 +1,25 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
 import plantShape from '../../helpers/propz/plantShape';
-import plantRequests from '../../helpers/data/plantRequest';
+// import plantRequests from '../../helpers/data/plantRequest';
 import './PlantItem.scss';
 
 class PlantItem extends React.Component {
   static propTypes = {
-    plant: plantShape.plantShape,
+    plant: plantShape,
   }
 
   render() {
     const { plant } = this.props;
-    const plantId = plantRequests.getRequest();
-    console.log(plantId);
     return (
       <div className='printed-plant-card'>
+      <div className='card-body'>
         <span className='plant-image'>{plant.image}</span>
-        <span className='plant-image'>{plant.name}</span>
-        <span className='plant-image'>{plant.size}</span>
-        <span className='plant-image'>{plant.sun}</span>
-        <span className='plant-image'>{plant.color}</span>
-        <span className='plant-image'>{plant.description}</span>
+        <span className='plant-name'>{plant.name}</span>
+        <span className='plant-size'>{plant.size}</span>
+        <span className='plant-sun'>{plant.sun}</span>
+        <span className='plant-color'>{plant.color}</span>
+        <span className='plant-description'>{plant.description}</span>
+      </div>
       </div>
     );
   }

@@ -1,20 +1,18 @@
 {
-  "myPlants":{
-    "myPLant1": {
-      "plantId": "plant1",
-      "gardenId": "garden1"
-    },
-    "myPlant2": {
-      "plantId": "plant2",
-      "gardenId": "garden2"
-    },
-    "myPLant4": {
-      "plantId": "plant3",
-      "gardenId": "garden2"
-    },
-    "myPlant5": {
-      "plantId": "plant4",
-      "gardenId": "garden3"
-    }
+  "myPLant1": {
+    "plantId": "plant1",
+    "gardenId": "garden1"
+  },
+  "myPlant2": {
+    "plantId": "plant2",
+    "gardenId": "garden2"
+  },
+  "myPLant4": {
+    "plantId": "plant3",
+    "gardenId": "garden2"
+  },
+  "myPlant5": {
+    "plantId": "plant4",
+    "gardenId": "garden3"
   }
 }
