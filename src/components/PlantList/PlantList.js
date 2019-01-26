@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import plantShape from '../../helpers/propz/plantShape';
-import PlantItem from '../PlantItem/PlantItem';
 import './PlantList.scss';
+import PlantItem from '../PlantItem/PlantItem';
+import plantShape from '../../helpers/propz/plantShape';
+
 
 class PlantList extends React.Component {
   static propTypes = {

@@ -17,6 +17,7 @@ import Gardens from '../components/pages/Gardens/Gardens';
 import Plants from '../components/pages/Plants/Plants';
 import './App.scss';
 
+
 const PublicRoute = ({ component: Component, authed, ...rest }) => {
   const routeChecker = props => (authed === false
     ? (<Component {...props} />)
