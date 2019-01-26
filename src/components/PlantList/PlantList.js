@@ -31,6 +31,7 @@ class PlantList extends React.Component {
       />
     ));
 
+
     return (
       <span className='col'>
         <h2>Plants</h2>
