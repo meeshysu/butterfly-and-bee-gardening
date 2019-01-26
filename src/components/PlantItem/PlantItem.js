@@ -1,6 +1,5 @@
 import React from 'react';
 import plantShape from '../../helpers/propz/plantShape';
-// import plantRequests from '../../helpers/data/plantRequest';
 import './PlantItem.scss';
 
 class PlantItem extends React.Component {

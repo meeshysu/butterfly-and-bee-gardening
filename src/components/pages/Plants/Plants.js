@@ -10,11 +10,11 @@ class Plants extends React.Component {
   }
 
   componentDidMount() {
-    plantRequest.getRequest()
+    plantRequest.getPlantRequest()
       .then((plants) => {
         this.setState({ plants });
       })
-      .catch(err => console.error('error with componentDidMount', err));
+      .catch(err => console.error('error with componentDidMount in plants', err));
   }
 
   render() {

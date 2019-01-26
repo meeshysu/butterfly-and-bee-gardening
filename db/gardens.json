@@ -1,11 +1,11 @@
 {
   "garden1": {
-    "uid": 12345,
+    "uid": "3l9BCHkrgdZ7MygBkopB6TcGYcF2",
     "name": "Black Eastern Swallowtail Garden",
     "description": "This is a garden specifically designed for my backyard, which will have plants for the Eastern Black Swallowtail butterfly. It'll contain both host and food plants."
   },
   "garden2": {
-    "uid": 34567,
+    "uid": "3l9BCHkrgdZ7MygBkopB6TcGYcF2",
     "name": "Honey Bee Garden",
     "description": "In the corner of my yard, I plan to build a couple of gardens for my neighbors Honey Bee babies. They travel up to 3 miles, but why make them? I want all the plants I don't want them to be too large, however."
   }

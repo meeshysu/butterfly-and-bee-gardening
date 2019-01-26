@@ -3,26 +3,26 @@ import apiKeys from './apiKeys';
 
 const firebaseUrl = apiKeys.firebaseConfig.databaseURL;
 
-const getPlantRequest = () => new Promise((resolve, reject) => {
+const getGardenRequest = () => new Promise((resolve, reject) => {
   axios
-    .get(`${firebaseUrl}/plants.json`)
+    .get(`${firebaseUrl}/gardens.json`)
     .then((res) => {
-      const plants = [];
+      const gardens = [];
       if (res.data !== null) {
         Object.keys(res.data).forEach((key) => {
           res.data[key].id = key;
-          plants.push(res.data[key]);
+          gardens.push(res.data[key]);
         });
       }
-      resolve(plants);
+      resolve(gardens);
     })
     .catch(err => reject(err));
 });
 
 
-const getSinglePlant = plantId => axios.get(`${firebaseUrl}/plants/${plantId}.json`);
+const gentSingleGarden = gardenId => axios.get(`${firebaseUrl}/gardens/${gardenId}.json`);
 
 export default {
-  getPlantRequest,
-  getSinglePlant,
+  getGardenRequest,
+  gentSingleGarden,
 };
