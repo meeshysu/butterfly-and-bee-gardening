@@ -7,6 +7,8 @@ import './Gardens.scss';
 class Gardens extends React.Component {
   state = {
     gardens: [],
+    isEditing: false,
+    editId: '-1',
   }
 
   componentDidMount() {
@@ -30,14 +32,21 @@ class Gardens extends React.Component {
       });
   }
 
+  passGardenToEdit = gardenId => this.setState({ isEditing: true, editId: gardenId });
+
   render() {
-    const { gardens } = this.state;
+    const {
+      gardens,
+      isEditing,
+      editId,
+    } = this.state;
     return (
       <div className='gardensPage mx-auto'>
         <GardenList gardens={gardens}
           deleteSingleGarden={this.deleteOneGarden}
+          passListingToEdit={this.passGardenToEdit}
         />
-        <GardenForm />
+        <GardenForm isEditing={isEditing} editId={editId}/>
       </div>
     );
   }

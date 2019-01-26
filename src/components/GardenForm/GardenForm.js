@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {
   Button,
   Form,
@@ -7,7 +8,19 @@ import {
   Input,
 } from 'reactstrap';
 
+
+const defaultGarden = {
+  uid: '',
+  name: '',
+  description: '',
+};
+
 class GardenForm extends React.Component {
+  static propTypes = {
+    isEditing: PropTypes.bool,
+    editId: PropTypes.string,
+  }
+
   render() {
     return (
       <Form>
