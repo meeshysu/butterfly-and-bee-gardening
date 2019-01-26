@@ -17,11 +17,26 @@ class Gardens extends React.Component {
       .catch(err => console.error('error with componentDidMount in gardens', err));
   }
 
+  deleteOneGarden = (gardenId) => {
+    gardenRequest.deleteGarden(gardenId)
+      .then(() => {
+        gardenRequest.getGardenRequest()
+          .then((gardens) => {
+            this.setState({ gardens });
+          });
+      })
+      .catch((err) => {
+        console.error('error with deleteOneGarden', err);
+      });
+  }
+
   render() {
     const { gardens } = this.state;
     return (
       <div className='gardensPage mx-auto'>
-        <GardenList gardens = { gardens }/>
+        <GardenList gardens={gardens}
+          deleteSingleGarden={this.deleteOneGarden}
+        />
         <GardenForm />
       </div>
     );
