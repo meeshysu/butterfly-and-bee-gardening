@@ -13,7 +13,7 @@ class PlantItem extends React.Component {
     return (
       <span className='row'>
         <span className='card-body'>
-          <img className='plant-image' src={plant.image} alt='plant'/>
+          <img className='plant-image' src={plant.image} alt='plant' />
           <p className='plant-name'>{plant.name}</p>
           <p className='plant-size'>{plant.size}</p>
           <p className='plant-sun'>{plant.sun}</p>

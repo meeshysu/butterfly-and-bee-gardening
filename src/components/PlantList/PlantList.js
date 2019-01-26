@@ -1,12 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import plantShape from '../../helpers/propz/plantShape';
-import PlantItem from '../PlantItem/PlantItem';
 import './PlantList.scss';
+import PlantItem from '../PlantItem/PlantItem';
+import plantShape from '../../helpers/propz/plantShape';
 
 class PlantList extends React.Component {
   static propTypes = {
     plants: PropTypes.arrayOf(plantShape),
+  }
+
+  state = {
+    query: '',
+  }
+
+  handleInputChange = () => {
+    this.setState({
+      query: this.search.value,
+    });
   }
 
   render() {
@@ -24,6 +34,13 @@ class PlantList extends React.Component {
     return (
       <span className='col'>
         <h2>Plants</h2>
+        <form className='mx-auto'>
+          <input className='col'
+            placeholder='Search for a plant or a trait...'
+            onChange={this.handleInputChange}
+            />
+            <p>{this.state.query}</p>
+        </form>
         <p>{plantItemComponent}</p>
       </span>
     );
