@@ -24,7 +24,7 @@ const deleteGarden = gardenId => axios.delete(`${firebaseUrl}/gardens/${gardenId
 
 const getSingleGarden = gardenId => axios.get(`${firebaseUrl}/gardens/${gardenId}.json`);
 
-const putRequest = (gardenId, gardens) => axios.put(`${firebaseUrl}/gardens/${gardenId}.json`, gardens);
+const putRequest = (gardenId, garden) => axios.put(`${firebaseUrl}/gardens/${gardenId}.json`, garden);
 
 export default {
   getGardenRequest,

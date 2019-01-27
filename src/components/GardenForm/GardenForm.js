@@ -69,8 +69,16 @@ class GardenForm extends React.Component {
 
   render() {
     const { newGarden } = this.state;
+    const { isEditing } = this.props;
+    const title = () => {
+      if (isEditing) {
+        return <h2>Edit Garden</h2>
+      }
+      return <h2>Add New Garden</h2>
+    };
     return (
       <Form onSubmit={this.formSubmit}>
+            {title()}
         <FormGroup>
           <Label for="example-garden">Garden Name</Label>
           <Input 
