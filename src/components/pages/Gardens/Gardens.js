@@ -32,6 +32,17 @@ class Gardens extends React.Component {
       });
   }
 
+  formSubmitGardenEvent = (newGarden) => {
+    gardenRequest.postRequest(newGarden)
+      .then(() => {
+        gardenRequest.getGardenRequest()
+          .then((gardens) => {
+            this.setState({ gardens });
+          });
+      })
+      .catch(err => console.error('error in formGardenSubmit', err));
+  }
+
   passGardenToEdit = gardenId => this.setState({ isEditing: true, editId: gardenId });
 
   render() {
@@ -40,13 +51,18 @@ class Gardens extends React.Component {
       isEditing,
       editId,
     } = this.state;
+
     return (
       <div className='gardensPage mx-auto'>
-        <GardenList gardens={gardens}
+        <GardenList 
+          gardens={this.state.gardens}
           deleteSingleGarden={this.deleteOneGarden}
           passListingToEdit={this.passGardenToEdit}
         />
-        <GardenForm isEditing={isEditing} editId={editId}/>
+        <GardenForm 
+        isEditing={isEditing} 
+        editId={editId} 
+        onSubmit={this.formSubmitGardenEvent} />
       </div>
     );
   }

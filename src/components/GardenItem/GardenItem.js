@@ -38,7 +38,7 @@ class GardenItem extends React.Component {
       {makeButtons()}
         <span className='card-body gardenCard' id={garden.id}>
           <p className='garden-name'>{garden.name}</p>
-          <p className='garden.description'>{garden.description}</p>
+          <p className='garden-description'>{garden.description}</p>
         </span>
       </span>
     );

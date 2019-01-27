@@ -18,13 +18,18 @@ const getGardenRequest = () => new Promise((resolve, reject) => {
     })
     .catch(err => reject(err));
 });
+const postRequest = garden => axios.post(`${firebaseUrl}/gardens.json`, garden);
 
 const deleteGarden = gardenId => axios.delete(`${firebaseUrl}/gardens/${gardenId}.json`);
 
 const gentSingleGarden = gardenId => axios.get(`${firebaseUrl}/gardens/${gardenId}.json`);
 
+const putRequest = (gardenId, gardens) => axios.put(`${firebaseUrl}/gardens/${gardenId}.json`, gardens);
+
 export default {
   getGardenRequest,
   gentSingleGarden,
   deleteGarden,
+  postRequest,
+  putRequest,
 };
