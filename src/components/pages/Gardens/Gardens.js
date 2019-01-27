@@ -57,7 +57,7 @@ class Gardens extends React.Component {
         <GardenList 
           gardens={this.state.gardens}
           deleteSingleGarden={this.deleteOneGarden}
-          passListingToEdit={this.passGardenToEdit}
+          passGardenToEdit={this.passGardenToEdit}
         />
         <GardenForm 
         isEditing={isEditing} 

@@ -8,14 +8,21 @@ import './GardenItem.scss';
 
 class GardenItem extends React.Component {
   static propTypes = {
-    gardens: gardenShape,
+    garden: gardenShape,
     deleteSingleGarden: PropTypes.func,
+    passGardenToEdit: PropTypes.func,
   }
 
   deleteGardenEvent = (e) => {
     e.preventDefault();
     const { deleteSingleGarden, garden } = this.props;
     deleteSingleGarden(garden.id);
+  }
+
+  editGardenEvent = (e) => {
+    e.preventDefault();
+    const { passGardenToEdit, garden } = this.props;
+    passGardenToEdit(garden.id);
   }
 
   render() {
@@ -26,7 +33,7 @@ class GardenItem extends React.Component {
       if (garden.uid === uid) {
         return (
           <pre>
-             <span className='delete-button btn-btn'><i className="far fa-minus-square" onClick={this.deleteGardenEvent}></i></span>  <span><i className="fas fa-pen-square"></i></span>
+             <span className='delete-button btn-btn'><i className="far fa-minus-square" onClick={this.deleteGardenEvent}></i></span>  <span className='edit-button btn-btn'><i className="fas fa-pen-square" onClick={this.editGardenEvent}></i></span>
           </pre>
         );
       }
