@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import gardenRequest from '../../helpers/data/gardenRequest';
+// import gardenRequest from '../../helpers/data/gardenRequest';
 import gardenShape from '../../helpers/propz/gardenShape';
-import './GardenItem.scss';
 import authRequests from '../../helpers/data/authRequests';
+import './GardenItem.scss';
+
 
 class GardenItem extends React.Component {
   static propTypes = {
@@ -29,6 +30,7 @@ class GardenItem extends React.Component {
           </pre>
         );
       }
+      return <span className="col-2"></span>;
     };
 
     return (
@@ -36,7 +38,7 @@ class GardenItem extends React.Component {
       {makeButtons()}
         <span className='card-body gardenCard' id={garden.id}>
           <p className='garden-name'>{garden.name}</p>
-          <p className='garden.description'>{garden.description}</p>
+          <p className='garden-description'>{garden.description}</p>
         </span>
       </span>
     );
