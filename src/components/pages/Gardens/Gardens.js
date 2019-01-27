@@ -33,14 +33,26 @@ class Gardens extends React.Component {
   }
 
   formSubmitGardenEvent = (newGarden) => {
-    gardenRequest.postRequest(newGarden)
+    const { isEditing, editId } = this.state;
+    if (isEditing) {
+      gardenRequest.putRequest(editId, newGarden)
       .then(() => {
         gardenRequest.getGardenRequest()
           .then((gardens) => {
-            this.setState({ gardens });
+            this.setState({ gardens, isEditing: false, editId: '-1' });
           });
       })
       .catch(err => console.error('error in formGardenSubmit', err));
+    } else {
+      gardenRequest.postRequest(newGarden)
+      .then(() => {
+        gardenRequest.getGardenRequest()
+        .then((gardens) => {
+          this.setState({ gardens });
+        });
+      })
+      .catch(err => console.error('error on formGardenSubmit', err));
+    }
   }
 
   passGardenToEdit = gardenId => this.setState({ isEditing: true, editId: gardenId });
@@ -57,7 +69,7 @@ class Gardens extends React.Component {
         <GardenList 
           gardens={this.state.gardens}
           deleteSingleGarden={this.deleteOneGarden}
-          passListingToEdit={this.passGardenToEdit}
+          passGardenToEdit={this.passGardenToEdit}
         />
         <GardenForm 
         isEditing={isEditing} 
