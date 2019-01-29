@@ -10,16 +10,14 @@ class PlantItem extends React.Component {
   render() {
     const { plant } = this.props;
     return (
-      <span className='row'>
-        <span className='card-body'>
+        <ul className='card-body'>
           <img className='plant-image' src={plant.image} alt='plant' />
-          <p className='plant-name'>{plant.name}</p>
-          <p className='plant-size'>{plant.size}</p>
-          <p className='plant-sun'>{plant.sun}</p>
-          <p className='plant-color'>{plant.color}</p>
-          <p className='plant-description'>{plant.description}</p>
-        </span>
-      </span>
+          <li className='plant-name'>{plant.name}</li>
+          <li className='plant-size'>{plant.size}</li>
+          <li className='plant-sun'>{plant.sun}</li>
+          <li className='plant-color'>{plant.color}</li>
+          <li className='plant-description'>{plant.description}</li>
+        </ul>
     );
   }
 }

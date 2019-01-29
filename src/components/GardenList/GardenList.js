@@ -8,7 +8,8 @@ class GardenList extends React.Component {
   static propTypes = {
     gardens: PropTypes.arrayOf(gardenShape),
     deleteSingleGarden: PropTypes.func,
-    passGardenToEdit: PropTypes.fun,
+    passGardenToEdit: PropTypes.func,
+    passGardenToDetails: PropTypes.func,
   }
 
   render() {
@@ -16,6 +17,7 @@ class GardenList extends React.Component {
       gardens,
       deleteSingleGarden,
       passGardenToEdit,
+      passGardenToDetails,
     } = this.props;
 
     const gardenItemComponent = gardens && gardens.map(garden => (
@@ -24,13 +26,14 @@ class GardenList extends React.Component {
         key={garden.id}
         deleteSingleGarden={deleteSingleGarden}
         passGardenToEdit={passGardenToEdit}
+        passGardenToDetails={passGardenToDetails}
       />
     ));
 
     return (
       <span className='col'>
         <h2>Gardens</h2>
-        <p>{gardenItemComponent}</p>
+        <ul>{gardenItemComponent}</ul>
       </span>
     );
   }

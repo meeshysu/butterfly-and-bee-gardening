@@ -40,9 +40,9 @@ class PlantList extends React.Component {
             placeholder='Search for a plant or a trait...'
             onChange={this.handleInputChange}
             />
-            <p>{this.state.query}</p>
+            <li>{this.state.query}</li>
         </form>
-        <p>{plantItemComponent}</p>
+        <li>{plantItemComponent}</li>
       </span>
     );
   }
