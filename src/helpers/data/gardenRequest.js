@@ -3,9 +3,9 @@ import apiKeys from './apiKeys';
 
 const firebaseUrl = apiKeys.firebaseConfig.databaseURL;
 
-const getGardenRequest = () => new Promise((resolve, reject) => {
+const getGardenByUidRequest = uid => new Promise((resolve, reject) => {
   axios
-    .get(`${firebaseUrl}/gardens.json`)
+    .get(`${firebaseUrl}/gardens.json?orderBy="uid"&equalTo="${uid}"`)
     .then((res) => {
       const gardens = [];
       if (res.data !== null) {
@@ -27,7 +27,7 @@ const getSingleGarden = gardenId => axios.get(`${firebaseUrl}/gardens/${gardenId
 const putRequest = (gardenId, garden) => axios.put(`${firebaseUrl}/gardens/${gardenId}.json`, garden);
 
 export default {
-  getGardenRequest,
+  getGardenByUidRequest,
   getSingleGarden,
   deleteGarden,
   postRequest,

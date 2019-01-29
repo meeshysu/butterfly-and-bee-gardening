@@ -8,7 +8,7 @@ class GardenList extends React.Component {
   static propTypes = {
     gardens: PropTypes.arrayOf(gardenShape),
     deleteSingleGarden: PropTypes.func,
-    passGardenToEdit: PropTypes.fun,
+    passGardenToEdit: PropTypes.func,
   }
 
   render() {
@@ -30,7 +30,7 @@ class GardenList extends React.Component {
     return (
       <span className='col'>
         <h2>Gardens</h2>
-        <p>{gardenItemComponent}</p>
+        <ul>{gardenItemComponent}</ul>
       </span>
     );
   }
