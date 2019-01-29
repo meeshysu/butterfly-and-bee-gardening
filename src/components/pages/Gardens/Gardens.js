@@ -55,6 +55,12 @@ class Gardens extends React.Component {
 
   passGardenToEdit = gardenId => this.setState({ isEditing: true, editId: gardenId });
 
+  passGardenToDetails = gardenId => this.props.history.push(`/gardens/${gardenId}`);
+
+  gardenDetailView = (gardenId) => {
+    this.passGardenToDetails(gardenId);
+  }
+
   render() {
     const {
       // gardens,
@@ -68,10 +74,13 @@ class Gardens extends React.Component {
           gardens={this.state.gardens}
           deleteSingleGarden={this.deleteOneGarden}
           passGardenToEdit={this.passGardenToEdit}
+          gardenDetailView={this.gardenDetailView}
+          passGardenToDetails={this.passGardenToDetails}
         />
         <GardenForm
           isEditing={isEditing}
           editId={editId}
+          passGardenToDetails={this.passGardenToDetails}
           onSubmit={this.formSubmitGardenEvent} />
       </div>
     );
