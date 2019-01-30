@@ -33,10 +33,10 @@ class GardenItem extends React.Component {
 
   render() {
     const { garden } = this.props;
-    const makeButtons = () => {
-      return (
+    return (
+      <li className='row'>
         <span className='col-2'>
-            <span className='delete-button btn-btn'>
+          <span className='delete-button btn-btn'>
             <i className="far fa-minus-square" onClick={this.deleteGardenEvent}></i>
           </span>
           <span className='edit-button btn-btn'>
@@ -46,12 +46,6 @@ class GardenItem extends React.Component {
             <i className="fas fa-angle-double-right"></i>
           </span>
         </span>
-      );
-    };
-
-    return (
-      <li className='row'>
-      {makeButtons()}
         <span className='card-body gardenCard' id={garden.id}>
           <p className='garden-name'>{garden.name}</p>
           <p className='garden-description'>{garden.description}</p>
