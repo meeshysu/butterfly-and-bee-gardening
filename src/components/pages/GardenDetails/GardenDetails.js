@@ -1,4 +1,5 @@
 import React from 'react';
+import { Button } from 'reactstrap';
 import PlantList from '../../PlantList/PlantList';
 
 import gardenRequests from '../../../helpers/data/gardenRequest';
@@ -29,11 +30,17 @@ class GardenDetails extends React.Component {
       });
   }
 
+  passMyPlantsToGarden = (e) => {
+    const gardenId = this.props.match.params.id;
+    this.props.history.push(`/gardens/${gardenId}/addPlants`);
+  }
+
   render() {
     const { garden, myPlants } = this.state;
     return (
       <div className='gardenPlantsForDetails mx-auto'>
         <h3>{garden.name}</h3>
+        <Button className='btn-btn addPlantButton' onClick={this.passMyPlantsToGarden}>Add A Plant</Button>
         <PlantList plants={myPlants} />
       </div>
     );
