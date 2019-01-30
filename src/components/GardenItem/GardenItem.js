@@ -28,7 +28,6 @@ class GardenItem extends React.Component {
   gardenDetailView = (e) => {
     e.preventDefault();
     const gardenId = this.props.garden.id;
-    console.log(gardenId);
     this.props.passGardenToDetails(gardenId);
   }
 
