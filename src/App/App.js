@@ -16,6 +16,7 @@ import authRequests from '../helpers/data/authRequests';
 import Gardens from '../components/pages/Gardens/Gardens';
 import Plants from '../components/pages/Plants/Plants';
 import GardenDetails from '../components/pages/GardenDetails/GardenDetails';
+import AddPlants from '../components/pages/AddPlants/AddPlants';
 import './App.scss';
 
 
@@ -86,6 +87,7 @@ class App extends React.Component {
               <div className='row'>
                 <Switch>
                   <Route path='/plants' component={Plants} />
+                  <PrivateRoute path='/gardens/:id/addPlants' component={AddPlants} authed={this.state.authed} />
                   <PrivateRoute path='/gardens/:id' component={GardenDetails} authed={this.state.authed} />
                   <PrivateRoute path='/gardens' component={Gardens} authed={this.state.authed} />
                   <PublicRoute path='/auth' component={Auth} authed={this.state.authed} />
