@@ -1,7 +1,6 @@
 import React from 'react';
 import { Button } from 'reactstrap';
 import PlantList from '../../PlantList/PlantList';
-
 import gardenRequests from '../../../helpers/data/gardenRequest';
 import smashRequests from '../../../helpers/data/smashRequests';
 
