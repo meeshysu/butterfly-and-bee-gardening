@@ -14,7 +14,7 @@ class GardenDetails extends React.Component {
     const gardenId = this.props.match.params.id;
     gardenRequests.getSingleGarden(gardenId)
       .then((garden) => {
-        this.setState({ garden: garden.data });
+        this.setState({ garden: garden.data, gardenId });
       })
       .catch((err) => {
         console.error('err in getGardenById', err);

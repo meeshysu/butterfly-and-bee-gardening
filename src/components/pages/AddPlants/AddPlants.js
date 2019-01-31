@@ -10,6 +10,7 @@ import './AddPlants.scss';
 class AddPlants extends React.Component {
   state = {
     plants: [],
+    gardenId: '',
   }
 
   static propTypes = {
@@ -21,7 +22,7 @@ class AddPlants extends React.Component {
     const gardenId = this.props.match.params.id;
     smashRequests.getPlantsWithMyPlants(gardenId)
       .then((plants) => {
-        this.setState({ plants });
+        this.setState({ plants, gardenId });
       })
       .catch(err => console.error('error with componentDidMount in plants', err));
   }
@@ -37,6 +38,7 @@ class AddPlants extends React.Component {
   render() {
     const {
       plants,
+      gardenId,
     } = this.state;
 
     const plantItemComponent = plants && plants.map(plant => (
@@ -44,6 +46,7 @@ class AddPlants extends React.Component {
         plant={plant}
         key={plant.id}
         updatePlantState={this.updatePlantState}
+        gardenId={gardenId}
       />
     ));
 

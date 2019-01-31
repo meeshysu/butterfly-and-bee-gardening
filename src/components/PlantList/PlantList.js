@@ -8,6 +8,7 @@ import './PlantList.scss';
 class PlantList extends React.Component {
   static propTypes = {
     plants: PropTypes.arrayOf(plantShape),
+    gardenId: PropTypes.string,
   }
 
   // onChange = (value, e) => {
@@ -23,7 +24,6 @@ class PlantList extends React.Component {
   //         || plant.sun.toLowerCase().includes(value.toLowerCase())
   //       ))};
   // }
-    
 
   render() {
     const {

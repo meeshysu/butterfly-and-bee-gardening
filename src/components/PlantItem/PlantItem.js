@@ -5,18 +5,21 @@ import plantShape from '../../helpers/propz/plantShape';
 import './PlantItem.scss';
 import myPlantsRequests from '../../helpers/data/myPlantsRequests';
 
+const defaultValue = {
+  gardenId: '',
+  plantId: '',
+};
+
 class PlantItem extends React.Component {
   static propTypes = {
-    plants: plantShape,
+    plant: plantShape,
     updatePlantState: PropTypes.func,
+    gardenId: PropTypes.string,
   }
 
-  // // click event function
-  // goodbyeMyPlantsEvent = (e) => {
-  //   e.preventDefault();
-  //   const { goodbyeMyPlants, plant } = this.props;
-  //   goodbyeMyPlants(plant.myPlantId);
-  // };
+  state = {
+    plantObject: defaultValue,
+  }
 
   goodbyeMyPlants = () => {
     const { plant, updatePlantState } = this.props;
@@ -27,12 +30,24 @@ class PlantItem extends React.Component {
       .catch(err => console.error('error with goodbyeMyPlants', err));
   }
 
+  helloMyPlants = () => {
+    const { plantObject } = this.state;
+    const { plant, updatePlantState, gardenId  } = this.props;
+    plantObject.plantId = plant.id;
+    plantObject.gardenId = gardenId;
+    myPlantsRequests.myPlantPost(plantObject)
+      .then(() => {
+        updatePlantState();
+      })
+      .catch(error => console.error(error));
+  }
+
   render() {
     const { plant } = this.props;
     const makeButton = () => {
       if (plant.myPlantId === 'sal') {
         return (
-          <button>add me</button>
+          <button onClick={this.helloMyPlants}>add me</button>
           // onlick on add me for the post request
           // create a function that gets the axios call,
           // like above, just call it right here in this.add
