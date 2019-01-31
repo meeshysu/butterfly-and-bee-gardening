@@ -19,6 +19,12 @@ const getMyPlantsByGardenId = gardenId => new Promise((resolve, reject) => {
     .catch(err => reject(err));
 });
 
+const myPlantPost = garden => axios.post(`${firebaseUrl}/myPlants.json`, garden);
+
+const deleteMyPlant = myPlantId => axios.delete(`${firebaseUrl}/myPlants/${myPlantId}.json`);
+
 export default {
   getMyPlantsByGardenId,
+  deleteMyPlant,
+  myPlantPost,
 };
