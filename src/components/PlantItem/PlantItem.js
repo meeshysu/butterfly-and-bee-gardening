@@ -1,22 +1,30 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import plantShape from '../../helpers/propz/plantShape';
-import myPlantsRequest from '../../helpers/data/myPlantsRequests';
+// import myPlantsRequest from '../../helpers/data/myPlantsRequests';
 import './PlantItem.scss';
-
-
-goodbyeMyPlants = (unselectMeId) => {
-  myPlantsRequest.deleteMyPlant(unselectMeId)
-    .then(() => {
-      this.makeButton();
-    })
-    .catch(err => console.error('error in goodbyeFriend', err));
-};
-
-// click event function
+import myPlantsRequests from '../../helpers/data/myPlantsRequests';
 
 class PlantItem extends React.Component {
   static propTypes = {
     plants: plantShape,
+    updatePlantState: PropTypes.func,
+  }
+
+  // // click event function
+  // goodbyeMyPlantsEvent = (e) => {
+  //   e.preventDefault();
+  //   const { goodbyeMyPlants, plant } = this.props;
+  //   goodbyeMyPlants(plant.myPlantId);
+  // };
+
+  goodbyeMyPlants = () => {
+    const { plant, updatePlantState } = this.props;
+    myPlantsRequests.deleteMyPlant(plant.myPlantId)
+      .then(() => {
+        updatePlantState();
+      })
+      .catch(err => console.error('error with goodbyeMyPlants', err));
   }
 
   render() {
@@ -32,7 +40,7 @@ class PlantItem extends React.Component {
       }
       if (plant.myPlantId !== 'sal' && plant.myPlantId) {
         return (
-          <button>unselect me</button>
+          <button onClick={this.goodbyeMyPlants}>unselect me</button>
         );
       }
       return '';

@@ -5,7 +5,7 @@ import PlantItem from '../../PlantItem/PlantItem';
 import smashRequests from '../../../helpers/data/smashRequests';
 // import PlantList from '../../PlantList/PlantList';
 import './AddPlants.scss';
-import myPlantRequest from '../../../helpers/data/myPlantRequest';
+// import myPlantsRequest from '../../../helpers/data/myPlantRequest';
 
 class AddPlants extends React.Component {
   state = {
@@ -30,6 +30,10 @@ class AddPlants extends React.Component {
     this.getMyPlantsPlants();
   }
 
+  updatePlantState = () => {
+    this.getMyPlantsPlants();
+  }
+
   render() {
     const {
       plants,
@@ -39,6 +43,7 @@ class AddPlants extends React.Component {
       <PlantItem
         plant={plant}
         key={plant.id}
+        updatePlantState={this.updatePlantState}
       />
     ));
 
