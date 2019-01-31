@@ -2,9 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import plantShape from '../../../helpers/propz/plantShape';
 import PlantItem from '../../PlantItem/PlantItem';
-import plantRequest from '../../../helpers/data/plantRequest';
+import smashRequests from '../../../helpers/data/smashRequests';
 // import PlantList from '../../PlantList/PlantList';
 import './AddPlants.scss';
+import myPlantRequest from '../../../helpers/data/myPlantRequest';
 
 class AddPlants extends React.Component {
   state = {
@@ -16,12 +17,17 @@ class AddPlants extends React.Component {
     passPlantsToAddPlants: PropTypes.func,
   }
 
-  componentDidMount() {
-    plantRequest.getPlantRequest()
+  getMyPlantsPlants() {
+    const gardenId = this.props.match.params.id;
+    smashRequests.getPlantsWithMyPlants(gardenId)
       .then((plants) => {
         this.setState({ plants });
       })
       .catch(err => console.error('error with componentDidMount in plants', err));
+  }
+
+  componentDidMount() {
+    this.getMyPlantsPlants();
   }
 
   render() {

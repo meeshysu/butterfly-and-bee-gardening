@@ -18,6 +18,7 @@ const getGardenByUidRequest = uid => new Promise((resolve, reject) => {
     })
     .catch(err => reject(err));
 });
+
 const postRequest = garden => axios.post(`${firebaseUrl}/gardens.json`, garden);
 
 const deleteGarden = gardenId => axios.delete(`${firebaseUrl}/gardens/${gardenId}.json`);
