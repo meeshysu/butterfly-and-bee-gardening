@@ -1,15 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import SearchField from 'react-search-field';
 import plantShape from '../../../helpers/propz/plantShape';
+import plantRequest from '../../../helpers/data/plantRequest';
+import PlantList from '../../PlantList/PlantList';
 import PlantItem from '../../PlantItem/PlantItem';
 import smashRequests from '../../../helpers/data/smashRequests';
-// import PlantList from '../../PlantList/PlantList';
+import myPlantsRequests from '../../../helpers/data/myPlantsRequests';
 import './AddPlants.scss';
-// import myPlantsRequest from '../../../helpers/data/myPlantRequest';
 
 class AddPlants extends React.Component {
   state = {
     plants: [],
+    filteredPlants: [],
     gardenId: '',
   }
 
@@ -20,9 +23,19 @@ class AddPlants extends React.Component {
 
   getMyPlantsPlants() {
     const gardenId = this.props.match.params.id;
+    const { filteredPlants } = this.state;
     smashRequests.getPlantsWithMyPlants(gardenId)
-      .then((plants) => {
-        this.setState({ plants, gardenId });
+      .then((plantz) => {
+        let newFilteredPlants = [];
+        if (filteredPlants.length > 0) {
+          const filteredPlantsIds = filteredPlants.map(x => x.id);
+          const fPlants = plantz.filter(p => filteredPlantsIds.includes(p.id));
+          newFilteredPlants = fPlants;
+        } else {
+          newFilteredPlants = plantz;
+        }
+
+        this.setState({ plants: plantz, filteredPlants: newFilteredPlants, gardenId });
       })
       .catch(err => console.error('error with componentDidMount in plants', err));
   }
@@ -31,17 +44,49 @@ class AddPlants extends React.Component {
     this.getMyPlantsPlants();
   }
 
-  updatePlantState = () => {
-    this.getMyPlantsPlants();
+  onChange = (value, e) => {
+    const { plants } = this.state;
+    const filteredPlants = [];
+    e.preventDefault();
+    if (!value) {
+      this.setState({ filteredPlants: plants });
+    } else {
+      plants.forEach((plant) => {
+        if (plant.name.toLowerCase().includes(value.toLowerCase())
+          || plant.color.toLowerCase().includes(value.toLowerCase())
+          || plant.sun.toLowerCase().includes(value.toLowerCase())
+          || plant.size.toLowerCase().includes(value.toLowerCase())
+        ) {
+          filteredPlants.push(plant);
+        }
+        this.setState({ filteredPlants });
+      });
+    }
+  }
+
+  updatePlantState = (action, myPlantId, newPlant) => {
+    if (action === 'delete') {
+      myPlantsRequests.deleteMyPlant(myPlantId)
+        .then(() => {
+          this.getMyPlantsPlants();
+        })
+        .catch(err => console.error('error with goodbyeMyPlants', err));
+    } else {
+      myPlantsRequests.myPlantPost(newPlant)
+        .then(() => {
+          this.getMyPlantsPlants();
+        })
+        .catch(error => console.error(error));
+    }
   }
 
   render() {
     const {
-      plants,
       gardenId,
+      filteredPlants,
     } = this.state;
 
-    const plantItemComponent = plants && plants.map(plant => (
+    const plantItemComponent = filteredPlants.map(plant => (
       <PlantItem
         plant={plant}
         key={plant.id}
@@ -53,6 +98,12 @@ class AddPlants extends React.Component {
     return (
       <div className="addPlantsToGardenPage mx-auto">
         <h3>Add Your Plant Here</h3>
+        <SearchField
+          placeholder="Search Plants..."
+          onChange={this.onChange}
+          searchText=""
+          classNames="test-class w-100"
+        />
         <li>{plantItemComponent}</li>
       </div>
     );

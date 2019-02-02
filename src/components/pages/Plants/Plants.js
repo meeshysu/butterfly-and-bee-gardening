@@ -1,7 +1,6 @@
 import React from 'react';
 import SearchField from 'react-search-field';
 import plantRequest from '../../../helpers/data/plantRequest';
-// import myPlantsRequests from '../../../helpers/data/myPlantsRequests';
 import PlantList from '../../PlantList/PlantList';
 import './Plants.scss';
 
@@ -36,7 +35,6 @@ class Plants extends React.Component {
         ) {
           filteredPlants.push(plant);
         }
-        // console.log(filteredPlants);
         this.setState({ filteredPlants });
       });
     }
