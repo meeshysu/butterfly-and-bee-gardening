@@ -48,9 +48,6 @@ class PlantItem extends React.Component {
       if (plant.myPlantId === 'sal') {
         return (
           <button onClick={this.helloMyPlants}>add me</button>
-          // onlick on add me for the post request
-          // create a function that gets the axios call,
-          // like above, just call it right here in this.add
         );
       }
       if (plant.myPlantId !== 'sal' && plant.myPlantId) {
@@ -60,13 +57,30 @@ class PlantItem extends React.Component {
       }
       return '';
     };
+    const sunIcons = () => {
+      if (plant.sun === 'Full Sun') {
+        return (
+          <i className="fas fa-sun fa-2x"></i>
+        );
+      }
+      if (plant.sun === 'Full sun to part shade') {
+        return (
+          <i class="fas fa-cloud-sun fa-2x"></i>
+        );
+      }
+      if (plant.sun === 'Morning Sun') {
+        return (
+          <i class="far fa-sun fa-2x"></i>
+        );
+      }
+    };
     return (
       <ul className='card-body'>
         <img className='plant-image' src={plant.image} alt='plant' />
         {makeButton()}
         <li className='plant-name'>{plant.name}</li>
         <li className='plant-size'>{plant.size}</li>
-        <li className='plant-sun'>{plant.sun}</li>
+        <li className='plant-sun'>{sunIcons()}</li>
         <li className='plant-color'>{plant.color}</li>
         <li className='plant-description'>{plant.description}</li>
       </ul>
