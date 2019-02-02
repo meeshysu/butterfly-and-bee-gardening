@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Button } from 'reactstrap';
+import { withRouter } from 'react-router-dom';
 import SearchField from 'react-search-field';
 import plantShape from '../../../helpers/propz/plantShape';
-import plantRequest from '../../../helpers/data/plantRequest';
-import PlantList from '../../PlantList/PlantList';
 import PlantItem from '../../PlantItem/PlantItem';
 import smashRequests from '../../../helpers/data/smashRequests';
 import myPlantsRequests from '../../../helpers/data/myPlantsRequests';
@@ -80,6 +80,13 @@ class AddPlants extends React.Component {
     }
   }
 
+
+  // returnToGardensIDPage = gardenId => this.props.history.push(`/gardens/${gardenId}`);
+
+  // gardenReturn = (gardenId) => {
+  //   this.returnToGardensIDPage(gardenId);
+  // }
+
   render() {
     const {
       gardenId,
@@ -98,6 +105,7 @@ class AddPlants extends React.Component {
     return (
       <div className="addPlantsToGardenPage mx-auto">
         <h3>Add Your Plant Here</h3>
+        <Button className='btn btn backToGarden' onClick={this.props.history.goBack}>Back To Garden</Button>
         <SearchField
           placeholder="Search Plants..."
           onChange={this.onChange}
@@ -109,4 +117,4 @@ class AddPlants extends React.Component {
     );
   }
 }
-export default AddPlants;
+export default withRouter(AddPlants);
