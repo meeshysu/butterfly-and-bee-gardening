@@ -1,6 +1,7 @@
 import React from 'react';
-import plantRequest from '../../../helpers/data/plantRequest';
 import SearchField from 'react-search-field';
+import plantRequest from '../../../helpers/data/plantRequest';
+// import myPlantsRequests from '../../../helpers/data/myPlantsRequests';
 import PlantList from '../../PlantList/PlantList';
 import './Plants.scss';
 
@@ -8,6 +9,7 @@ import './Plants.scss';
 class Plants extends React.Component {
   state = {
     plants: [],
+    filteredPlants: [],
   }
 
   componentDidMount() {
@@ -20,7 +22,6 @@ class Plants extends React.Component {
   }
 
   onChange = (value, e) => {
-    console.log(value);
     const { plants } = this.state;
     const filteredPlants = [];
     e.preventDefault();
@@ -28,26 +29,30 @@ class Plants extends React.Component {
       this.setState({ filteredPlants: plants });
     } else {
       plants.forEach((plant) => {
-        if (plant.name.toLowerCase().includes(value.toLowerCase()) || plant.color.toLowerCase().includes(value.toLowerCase())) {
-          filteredPlants.push(plants);
+        if (plant.name.toLowerCase().includes(value.toLowerCase())
+        || plant.color.toLowerCase().includes(value.toLowerCase())
+        || plant.sun.toLowerCase().includes(value.toLowerCase())
+        || plant.size.toLowerCase().includes(value.toLowerCase())
+        ) {
+          filteredPlants.push(plant);
         }
-        console.log(filteredPlants);
+        // console.log(filteredPlants);
         this.setState({ filteredPlants });
       });
     }
   }
 
   render() {
-    const { plants, filteredPlants } = this.state;
+    const { filteredPlants } = this.state;
     return (
       <div className='plantsPage mx-auto'>
         <SearchField
-          placeholder="Search Beans..."
+          placeholder="Search Plants..."
           onChange={this.onChange}
           searchText=""
           classNames="test-class w-100"
         />
-        <PlantList plants={plants}
+        <PlantList plants={filteredPlants}
           goodbyeMyPlants={this.goodbyeMyPlants}
           filteredPlants={filteredPlants} />
       </div>
