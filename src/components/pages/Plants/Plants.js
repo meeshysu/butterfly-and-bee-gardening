@@ -1,6 +1,6 @@
 import React from 'react';
 import plantRequest from '../../../helpers/data/plantRequest';
-import myPlantsRequests from '../../../helpers/data/myPlantsRequests';
+// import myPlantsRequests from '../../../helpers/data/myPlantsRequests';
 import PlantList from '../../PlantList/PlantList';
 import './Plants.scss';
 
