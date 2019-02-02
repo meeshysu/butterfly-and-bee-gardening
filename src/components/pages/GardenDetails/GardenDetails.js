@@ -40,7 +40,8 @@ class GardenDetails extends React.Component {
       <div className='gardenPlantsForDetails mx-auto'>
         <h3>{garden.name}</h3>
         <Button className='btn-btn addPlantButton' onClick={this.passMyPlantsToGarden}>Add A Plant</Button>
-        <PlantList plants={myPlants} />
+        <PlantList plants={myPlants}
+        />
       </div>
     );
   }

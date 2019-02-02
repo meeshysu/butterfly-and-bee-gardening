@@ -1,9 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import plantShape from '../../helpers/propz/plantShape';
-// import myPlantsRequest from '../../helpers/data/myPlantsRequests';
 import './PlantItem.scss';
-import myPlantsRequests from '../../helpers/data/myPlantsRequests';
 
 const defaultValue = {
   gardenId: '',
@@ -23,23 +21,15 @@ class PlantItem extends React.Component {
 
   goodbyeMyPlants = () => {
     const { plant, updatePlantState } = this.props;
-    myPlantsRequests.deleteMyPlant(plant.myPlantId)
-      .then(() => {
-        updatePlantState();
-      })
-      .catch(err => console.error('error with goodbyeMyPlants', err));
+    updatePlantState('delete', plant.myPlantId, {});
   }
 
   helloMyPlants = () => {
-    const { plantObject } = this.state;
-    const { plant, updatePlantState, gardenId  } = this.props;
+    const plantObject = { ...this.state.plantObject };
+    const { plant, updatePlantState, gardenId } = this.props;
     plantObject.plantId = plant.id;
     plantObject.gardenId = gardenId;
-    myPlantsRequests.myPlantPost(plantObject)
-      .then(() => {
-        updatePlantState();
-      })
-      .catch(error => console.error(error));
+    updatePlantState('create', 'none', plantObject);
   }
 
   render() {
@@ -65,15 +55,32 @@ class PlantItem extends React.Component {
       }
       if (plant.sun === 'Full sun to part shade') {
         return (
-          <i class="fas fa-cloud-sun fa-2x"></i>
+          <i className="fas fa-cloud-sun fa-2x"></i>
         );
       }
       if (plant.sun === 'Morning Sun') {
         return (
-          <i class="far fa-sun fa-2x"></i>
+          <i className="far fa-sun fa-2x"></i>
         );
       }
+      return '';
     };
+    // const sizeIcons = () => {
+    //   if (plant.size === 'Small') {
+    //     return (
+    //       <i class="fab fa-stripe-s"></i>
+    //     );
+    //   }
+    //   if (plant.size === 'Medium') {
+    //     return (
+    //       <i class="fab fa-medium-m"></i>
+    //     );
+    //   }
+      // if (plant.size === 'Large') {
+      //   return (
+      //   );
+      // }
+    // };
     return (
       <ul className='card-body'>
         <img className='plant-image' src={plant.image} alt='plant' />
