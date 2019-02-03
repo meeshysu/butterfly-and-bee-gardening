@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './GardenList.scss';
+// import './GardenList.scss';
 import gardenShape from '../../helpers/propz/gardenShape';
 import GardenItem from '../GardenItem/GardenItem';
 
