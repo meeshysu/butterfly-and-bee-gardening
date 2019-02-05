@@ -1,3 +1,43 @@
+## Butterfly & Bee Gardening 
+
+This particular application is focused around finding the right butterfly and bee gardening plants the users specific needs. The primary user will be the gardener who needs help. I hope that horticulturist in the business of selling plants would also utilize this app, perhaps even with the primary user who is seeking the plant(s). When the user goes to the website, they will have a brief introduction to what butterfly and bee gardening is, along with how important it is to incorporate these plants into their yards. The user will be able to search the plants that I have added to the website initially. Then, they may create a garden. 
+
+A garden? Yes. Say a user wants to have a garden specifically for Clouded Sulphur Butterflies. They can choose plants specific for those butterflies and add the plants they are interested in *into* that garden. It saves in their profile for later use. They can delete said plants, or continue to add more! And the gardens are limitless. Create a garden for every idea! Don't want it anymore? It can be deleted. Changed your title name? Edit it!
+
+A user can search for the plant based off of size, sun requirements, color and name. Plants based on their needs will appear with a photo and a brief description. There will be options to then save the plant if they want, or they can start over and find another plant!
+
+## Technologies Used 
+
+- Webpack/Eslint
+- React
+- Reactstrap
+- Axios
+- CRUD
+- Firebase
+- Javascript
+- SCSS/CSS
+- HTML
+- Gimp
+
+## Screenshots
+
+![home_page](./images/AuthPage1.png)
+![plants_page](./images/PlantsPage1.png)
+![gardens_page](./images/GardensPage1.png)
+![your_plants_page](./images/YourPlants1.png)
+![add_plants_page](./images/AddPlant1.png)
+
+## Check it out: Live Demo
+
+[Butterfly & Bee Gardening](https://butterfly-gardening.firebaseapp.com/)
+
+
+
+
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -12,10 +52,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br>
 You will also see any lint errors in the console.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run build`
 
