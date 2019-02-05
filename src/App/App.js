@@ -87,7 +87,7 @@ class App extends React.Component {
             <div className='container'>
               <div className='row'>
                 <Switch>
-                  <PublicRoute path='/plants' component={Plants} />
+                  <Route path='/plants' component={Plants} />
                   <PrivateRoute path='/gardens/:id/addPlants' component={AddPlants} authed={this.state.authed} />
                   <PrivateRoute path='/gardens/:id' component={GardenDetails} authed={this.state.authed} />
                   <PrivateRoute path='/gardens' component={Gardens} authed={this.state.authed} />
