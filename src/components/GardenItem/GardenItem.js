@@ -19,6 +19,11 @@ class GardenItem extends React.Component {
     deleteSingleGarden(garden.id);
   }
 
+  // deleteMyPlants = (e) => {
+  //   e.preventDefault();
+  //   const { deleteMyPlantsForGarden, garden } = this.props;
+  // }
+
   editGardenEvent = (e) => {
     e.preventDefault();
     const { passGardenToEdit, garden } = this.props;

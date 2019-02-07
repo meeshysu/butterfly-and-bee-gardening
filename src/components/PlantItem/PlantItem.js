@@ -76,21 +76,25 @@ class PlantItem extends React.Component {
     //       <i class="fab fa-medium-m"></i>
     //     );
     //   }
-      // if (plant.size === 'Large') {
-      //   return (
-      //   );
-      // }
+    // if (plant.size === 'Large') {
+    //   return (
+    //   );
+    // }
     // };
     return (
-      <ul className='card-body'>
-        <img className='plant-image' src={plant.image} alt='plant' />
-        {makeButton()}
-        <li className='plant-name'>{plant.name}</li>
-        <li className='plant-size'>{plant.size}</li>
-        <li className='plant-sun'>{sunIcons()}</li>
-        <li className='plant-color'>{plant.color}</li>
-        <li className='plant-description'>{plant.description}</li>
+      <div className="card-deck">
+        <ul className="card">
+          <img className='plant-image' src={plant.image} alt='plant' />
+        <ul className='card-body'>
+          {makeButton()}
+          <li className='plant-name'>{plant.name}</li>
+          <li className='plant-size'>{plant.size}</li>
+          <li className='plant-sun'>{sunIcons()}</li>
+          <li className='plant-color'>{plant.color}</li>
+          <li className='plant-description'>{plant.description}</li>
+        </ul>
       </ul>
+      </div>
     );
   }
 }
