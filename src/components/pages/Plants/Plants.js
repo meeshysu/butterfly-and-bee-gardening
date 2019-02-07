@@ -43,12 +43,12 @@ class Plants extends React.Component {
   render() {
     const { filteredPlants } = this.state;
     return (
-      <div className='plantsPage mx-auto'>
+      <div className='plantsPage mt-4'>
         <SearchField
           placeholder="Search Plants..."
           onChange={this.onChange}
           searchText=""
-          classNames="test-class w-100"
+          classNames="test-class w-50 mt-auto"
         />
         <PlantList plants={filteredPlants}
           goodbyeMyPlants={this.goodbyeMyPlants}

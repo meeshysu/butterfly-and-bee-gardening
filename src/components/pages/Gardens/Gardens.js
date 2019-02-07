@@ -63,7 +63,6 @@ class Gardens extends React.Component {
 
   render() {
     const {
-      // gardens,
       isEditing,
       editId,
     } = this.state;

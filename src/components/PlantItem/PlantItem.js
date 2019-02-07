@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Button } from 'reactstrap';
 import plantShape from '../../helpers/propz/plantShape';
 import './PlantItem.scss';
 
@@ -37,12 +38,12 @@ class PlantItem extends React.Component {
     const makeButton = () => {
       if (plant.myPlantId === 'sal') {
         return (
-          <button onClick={this.helloMyPlants}>add me</button>
+          <Button className='btn btn-info' onClick={this.helloMyPlants}>add me</Button>
         );
       }
       if (plant.myPlantId !== 'sal' && plant.myPlantId) {
         return (
-          <button onClick={this.goodbyeMyPlants}>unselect me</button>
+          <Button className='btn btn-info' onClick={this.goodbyeMyPlants}>unselect me</Button>
         );
       }
       return '';
@@ -76,21 +77,25 @@ class PlantItem extends React.Component {
     //       <i class="fab fa-medium-m"></i>
     //     );
     //   }
-      // if (plant.size === 'Large') {
-      //   return (
-      //   );
-      // }
+    // if (plant.size === 'Large') {
+    //   return (
+    //   );
+    // }
     // };
     return (
-      <ul className='card-body'>
-        <img className='plant-image' src={plant.image} alt='plant' />
-        {makeButton()}
-        <li className='plant-name'>{plant.name}</li>
-        <li className='plant-size'>{plant.size}</li>
-        <li className='plant-sun'>{sunIcons()}</li>
-        <li className='plant-color'>{plant.color}</li>
-        <li className='plant-description'>{plant.description}</li>
+      <div className="card-deck">
+        <ul className="card">
+          <img className='plant-image' src={plant.image} alt='plant' />
+        <ul className='card-body'>
+          {makeButton()}
+          <li className='plant-name'>{plant.name}</li>
+          <li className='plant-size'>{plant.size}</li>
+          <li className='plant-sun'>{sunIcons()}</li>
+          <li className='plant-color'>{plant.color}</li>
+          <li className='plant-description'>{plant.description}</li>
+        </ul>
       </ul>
+      </div>
     );
   }
 }

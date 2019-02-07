@@ -105,12 +105,12 @@ class AddPlants extends React.Component {
     return (
       <div className="addPlantsToGardenPage mx-auto">
         <h3>Add Your Plant Here</h3>
-        <Button className='btn btn backToGarden' onClick={this.props.history.goBack}>Back To Garden</Button>
+        <Button className='btn btn-info backToGarden m-2' onClick={this.props.history.goBack}>Back To Garden</Button>
         <SearchField
           placeholder="Search Plants..."
           onChange={this.onChange}
           searchText=""
-          classNames="test-class w-100"
+          classNames="test-class w-50 m-4"
         />
         <li>{plantItemComponent}</li>
       </div>

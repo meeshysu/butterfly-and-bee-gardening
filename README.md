@@ -21,11 +21,11 @@ A user can search for the plant based off of size, sun requirements, color and n
 
 ## Screenshots
 
-![home_page](./images/AuthPage1.png)
+<!-- ![home_page](./images/AuthPage1.png)
 ![plants_page](./images/PlantsPage1.png)
 ![gardens_page](./images/GardensPage1.png)
 ![your_plants_page](./images/YourPlants1.png)
-![add_plants_page](./images/AddPlant1.png)
+![add_plants_page](./images/AddPlant1.png) -->
 
 ## Check it out: Live Demo
 
