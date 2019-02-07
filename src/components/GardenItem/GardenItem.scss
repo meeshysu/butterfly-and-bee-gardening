@@ -2,6 +2,12 @@
   margin: 12px;
 }
 
-.container {
-
+.gardensPageContainer, .gardenForm {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  max-width: 40%;
+  border: 1px solid black;
 }
+
