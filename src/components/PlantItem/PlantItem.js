@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Button } from 'reactstrap';
 import plantShape from '../../helpers/propz/plantShape';
 import './PlantItem.scss';
 
@@ -37,12 +38,12 @@ class PlantItem extends React.Component {
     const makeButton = () => {
       if (plant.myPlantId === 'sal') {
         return (
-          <button onClick={this.helloMyPlants}>add me</button>
+          <Button className='btn btn-info' onClick={this.helloMyPlants}>add me</Button>
         );
       }
       if (plant.myPlantId !== 'sal' && plant.myPlantId) {
         return (
-          <button onClick={this.goodbyeMyPlants}>unselect me</button>
+          <Button className='btn btn-info' onClick={this.goodbyeMyPlants}>unselect me</Button>
         );
       }
       return '';

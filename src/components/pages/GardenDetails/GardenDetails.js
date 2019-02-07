@@ -1,4 +1,5 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 import { Button } from 'reactstrap';
 import PlantList from '../../PlantList/PlantList';
 import gardenRequests from '../../../helpers/data/gardenRequest';
@@ -39,7 +40,8 @@ class GardenDetails extends React.Component {
     return (
       <div className='gardenPlantsForDetails mx-auto'>
         <h3>{garden.name}</h3>
-        <Button className='btn-btn addPlantButton' onClick={this.passMyPlantsToGarden}>Add A Plant</Button>
+        <Button className='btn btn-info addPlantButton' onClick={this.passMyPlantsToGarden}>Add A Plant</Button>
+        <Button className='btn btn-info backToGarden m-2' onClick={this.props.history.goBack}>Back To Gardens</Button>
         <PlantList plants={myPlants}
         />
       </div>
@@ -47,4 +49,4 @@ class GardenDetails extends React.Component {
   }
 }
 
-export default GardenDetails;
+export default withRouter(GardenDetails);
