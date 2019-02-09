@@ -66,22 +66,6 @@ class PlantItem extends React.Component {
       }
       return '';
     };
-    // const sizeIcons = () => {
-    //   if (plant.size === 'Small') {
-    //     return (
-    //       <i class="fab fa-stripe-s"></i>
-    //     );
-    //   }
-    //   if (plant.size === 'Medium') {
-    //     return (
-    //       <i class="fab fa-medium-m"></i>
-    //     );
-    //   }
-    // if (plant.size === 'Large') {
-    //   return (
-    //   );
-    // }
-    // };
     return (
       <div className="card-deck">
         <ul className="card">
