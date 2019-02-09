@@ -1,0 +1,13 @@
+.delete-button, .edit-button, .garden-detail {
+  margin: 12px;
+}
+
+.gardensPageContainer, .gardenForm {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  max-width: 40%;
+  border: 1px solid black;
+}
+

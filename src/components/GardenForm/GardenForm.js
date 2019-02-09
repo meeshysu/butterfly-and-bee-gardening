@@ -77,7 +77,7 @@ class GardenForm extends React.Component {
       return <h2>Add New Garden</h2>;
     };
     return (
-      <Form onSubmit={this.formSubmit}>
+      <Form className='gardenForm' onSubmit={this.formSubmit}>
         {title()}
         <FormGroup>
           <Label for="example-garden">Garden Name</Label>
