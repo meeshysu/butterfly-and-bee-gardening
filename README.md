@@ -31,6 +31,23 @@ A user can search for the plant based off of size, sun requirements, color and n
 
 [Butterfly & Bee Gardening](https://butterfly-gardening.firebaseapp.com/)
 
+## How to run this project
+
+- Setup a Firebase account if you haven't already. If you have a gmail, you can just go to your Firebase console via your google username.
+  + Create a firebase project.
+  + Enable Google Authentication under 'Sign-In Method' in the Authentication tab.
+  + Create a Firebase database and import the !base .json available in my GitHub repo.
+  + Complete the import for Plants, myPlants and Gardens.
+  + Go to Database in Firebase and click on the 'Rules' tab. Add the following rule:
+```
+   ".indexOn":"uid"
+ },```
+```
+  + Clone the repository through your terminal. You will need to use 'SSH' for the clone link.
+  + Change it to repository directory in your terminal.
+  + At the root of the project `run npm install` to install necessary dependencies.
+  + Create an apiKeys.js file (refer to apiKeys.js.example for an example). (Important!!! YOU MUST ADD YOUR API KEYS PATH TO THE .gitignore FILE! EVEN IF YOU ARE NOT PUSHING UP THIS PROJECT -- WHICH SHOULDN'T BE THE CASE AT ALL, IT IS MY PROJECT AFTER ALL -- IT'S BEST IN CASE OF AN ACCIDENT. SAFETY MEASURES FIRST! OPEN API KEYS ARE BAD!)
+  + Type npm start in your coding program's terminal to run the project at http://localhost:3000.
 
 
 
