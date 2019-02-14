@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import header from '../../images/Header.png';
 import BlackSwallowtailBorder from '../../images/BlackSwallowtailBorder.png';
+import BlackSwallowtailBorderReverse from '../../images/BlackSwallowtailBorderReverse.png';
 import aboutBees from '../../images/AboutBees.png';
 import aboutButterflies from '../../images/AboutButterflies.png';
 import authRequests from '../../helpers/data/authRequests';
@@ -31,9 +32,9 @@ class Auth extends React.Component {
 
             Another large factor and concern was the mosquito outbreak that caused pest management companies and local governments to spray nonselective pesticides to get rid of the disease concern. This reduced the population of a lot of major species of butterflies and bees. So what happens when these guys are gone? What do you think about hand painting pollen on a plant's female stigma from the male's anther? It's to get food, of course, because the natural pollinators that we have are all dead. Sounds good right? One of the main reasons we have squash are due to bees, for instance. Wonder why your squash plant wasn't producing? Yep. That's one of the main reasons.
             </div>
-          <img src={BlackSwallowtailBorder} alt='frame' className='butterfly-frame justify-content-end'></img>
+          <img src={BlackSwallowtailBorder} alt='frame' className='butterfly-frame'></img>
         </div>
-        <ul className='about-bee-header col-3 p-2'>
+        <ul className='about-bee-header p-2'>
           <img src={aboutBees} alt='frame' className='aboutBees-div'></img>
         </ul>
       <div className='about-bee-container row align-items-end mx-2'>
@@ -42,12 +43,13 @@ class Auth extends React.Component {
 
           Bees are fascinating creatures. Honey bees can travel up to 3 miles away from their hives. It's important for us to plant flowers for them in our gardens, too. Just because we don't have hives, doesn't mean that we can't help out.
             </div>
+            <img src={BlackSwallowtailBorderReverse} alt='frame' className='butterfly-frame-reverse justify-content-start'></img>
       </div>
-      <ul className='about-butter-header col-6 mx-2'>
-        <img src={aboutButterflies} alt='frame' className='aboutButterflies-div justify-content-start'></img>
+      <ul className='about-butter-header col-3 p-2'>
+        <img src={aboutButterflies} alt='frame' className='aboutButterflies-div'></img>
       </ul>
-      <div className='about-butter-container col-lg-6'>
-        <div className='about-butter-descrip d-flex flex-column mx-2'>
+      <div className='about-butter-container mx-2'>
+        <div className='about-butter-descrip col-7'>
           Lorem ipsum dolar sit amet accusantium iste quae eaque ipsa sit magni aspernatur accusantium doloremque veritatis ab ipsam ipsam, rem nemo inventore nemo quia ipsam aut rem quia sed dicta aspernatur .Lorem ipsum dolar sit amet accusantium iste quae eaque ipsa sit magni aspernatur accusantium doloremque veritatis ab ipsam ipsam, rem nemo inventore nemo quia ipsam aut rem quia sed dicta aspernatur .Lorem ipsum dolar sit amet accusantium iste quae eaque ipsa sit magni aspernatur accusantium doloremque veritatis ab ipsam ipsam, rem nemo inventore nemo quia ipsam aut rem quia sed dicta aspernatur .Lorem ipsum dolar sit amet accusantium iste quae eaque ipsa sit magni aspernatur accusantium doloremque veritatis ab ipsam ipsam, rem nemo inventore nemo quia ipsam aut rem quia sed dicta aspernatur .Lorem ipsum dolar sit amet accusantium iste quae eaque ipsa sit magni aspernatur accusantium doloremque veritatis ab ipsam ipsam, rem nemo inventore nemo quia ipsam aut rem quia sed dicta aspernatur .Lorem ipsum dolar sit amet accusantium iste quae eaque ipsa sit magni aspernatur accusantium doloremque veritatis ab ipsam ipsam, rem nemo inventore nemo quia ipsam aut rem quia sed dicta aspernatur .Lorem ipsum dolar sit amet accusantium iste quae eaque ipsa sit magni aspernatur accusantium doloremque veritatis ab ipsam ipsam, rem nemo inventore nemo quia ipsam aut rem quia sed dicta aspernatur .Lorem ipsum dolar sit amet accusantium iste quae eaque ipsa sit magni aspernatur accusantium doloremque veritatis ab ipsam ipsam, rem nemo inventore nemo quia ipsam aut rem quia sed dicta aspernatur .
             </div>
       </div>
