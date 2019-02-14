@@ -1,41 +1,47 @@
-.about-scroll, .outer-container {
-  height: 350px;
-  width: 800px;
-  border-radius: 10px;
- }      
- 
- .about-bee-scroll, .outer-bee-container {
-   height: 200px;
-   width: 500px;
-   border-radius: 10px;
- }
+.about-container {
+  height: 400px;
+  width: auto;
+  text-align: justify;
+  margin: 5%;
+}   
 
- .about-butter-scroll, .outer-butter-container {
-  height: 200px;
-  width: 500px;
-  border-radius: 10px;
+.about-descrip {
+  width: 1200px;
+  margin-top: -6%;
+  margin-left: 9%;
 }
 
- .outer-container, .outer-bee-container, .outer-butter-container {
-  object-fit: contain;
-  position: relative;
-  overflow: hidden;
-  border: 1px solid black;
- }
+.about-bee-header {
+  margin: auto;
+  margin-top: -4%;
+}
 
- .inner-container, .inner-bee-container, .inner-butter-container {
-  position: absolute;
-  left: 0;
-  overflow-x: hidden;
-  overflow-y: scroll;
- }
+.butterfly-frame {
+  z-index: -1;
+  margin-left: 45%;
+}
 
- .inner-container::-webkit-scrollbar, .inner-bee-container::-webkit-scrollbar, .inner-butter-container::-webkit-scrollbar{
-  display: none;
- }
+.about-butter-header {
+  margin: auto;
+  margin-top: -39%;
+}
 
- .about-container, .about-bee-container, .about-butter-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
- }
+.about-bee-descrip {
+  margin-top: -1%;
+  margin-left: 23%;
+  text-align: justify;
+}
+
+.about-butter-descrip {
+  z-index: -1;
+  margin-top: -35%;
+  margin-left: 12%;
+  text-align: justify;
+}
+
+.yay-button {
+  margin: auto;
+  margin-top: -8%;
+  padding: 4px;
+  z-index: -1;
+}
