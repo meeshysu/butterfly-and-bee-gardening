@@ -1,41 +1,21 @@
-.about-scroll, .outer-container {
-  height: 350px;
-  width: 800px;
-  border-radius: 10px;
- }      
- 
- .about-bee-scroll, .outer-bee-container {
-   height: 200px;
-   width: 500px;
-   border-radius: 10px;
- }
+.about-container {
+  height: 400px;
+  width: auto;
+  text-align: justify-content;
+  margin: 5%;
+}   
 
- .about-butter-scroll, .outer-butter-container {
-  height: 200px;
-  width: 500px;
-  border-radius: 10px;
+.about-bee-header {
+  margin: left;
+  margin-top: -4%;
 }
 
- .outer-container, .outer-bee-container, .outer-butter-container {
-  object-fit: contain;
-  position: relative;
-  overflow: hidden;
-  border: 1px solid black;
- }
+.about-bee-descrip {
+  margin-top: -2%;
+  margin-left: 3%;
+  text-align: justify;
+}
 
- .inner-container, .inner-bee-container, .inner-butter-container {
-  position: absolute;
-  left: 0;
-  overflow-x: hidden;
-  overflow-y: scroll;
- }
-
- .inner-container::-webkit-scrollbar, .inner-bee-container::-webkit-scrollbar, .inner-butter-container::-webkit-scrollbar{
-  display: none;
- }
-
- .about-container, .about-bee-container, .about-butter-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
- }
+.butterfly-frame {
+  z-index: -1;
+}
