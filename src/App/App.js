@@ -15,7 +15,6 @@ import connection from '../helpers/data/connection';
 import authRequests from '../helpers/data/authRequests';
 import Gardens from '../components/pages/Gardens/Gardens';
 import Plants from '../components/pages/Plants/Plants';
-import Home from '../components/pages/Home/Home';
 import GardenDetails from '../components/pages/GardenDetails/GardenDetails';
 import AddPlants from '../components/pages/AddPlants/AddPlants';
 import './App.scss';

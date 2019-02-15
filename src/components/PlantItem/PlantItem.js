@@ -67,7 +67,7 @@ class PlantItem extends React.Component {
       return '';
     };
     return (
-      <div className="card-deck">
+      <div className="card-group">
         <ul className="card">
           <img className='plant-image' src={plant.image} alt='plant' />
         <ul className='card-body'>
