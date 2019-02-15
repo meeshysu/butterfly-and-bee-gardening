@@ -3,6 +3,7 @@ import GardenForm from '../../GardenForm/GardenForm';
 import GardenList from '../../GardenList/GardenList';
 import gardenRequest from '../../../helpers/data/gardenRequest';
 import authRequests from '../../../helpers/data/authRequests';
+import GetGardens from '../../../images/GetGardens1.png';
 import './Gardens.scss';
 
 class Gardens extends React.Component {
@@ -69,6 +70,7 @@ class Gardens extends React.Component {
 
     return (
       <div className='gardensPage mx-auto'>
+      <img src={GetGardens} alt='gardens' className='getGardens-div'></img>
         <GardenList
           gardens={this.state.gardens}
           deleteSingleGarden={this.deleteOneGarden}

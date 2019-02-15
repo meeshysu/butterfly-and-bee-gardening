@@ -9,6 +9,7 @@ import {
 } from 'reactstrap';
 import authRequests from '../../helpers/data/authRequests';
 import gardenRequest from '../../helpers/data/gardenRequest';
+import AddNewGarden from '../../images/NewGarden.png';
 
 
 const defaultGarden = {
@@ -74,7 +75,7 @@ class GardenForm extends React.Component {
       if (isEditing) {
         return <h2>Edit Garden</h2>;
       }
-      return <h2>Add New Garden</h2>;
+      return <img src={AddNewGarden} alt='new-garden' className='newGarden-div'/>;
     };
     return (
       <Form className='gardenForm' onSubmit={this.formSubmit}>

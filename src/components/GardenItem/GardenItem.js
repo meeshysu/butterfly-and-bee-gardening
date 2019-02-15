@@ -1,7 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import myPlantRequest from '../../helpers/data/myPlantsRequests';
-// import smashRequests from '../../helpers/data/smashRequests';
 import gardenShape from '../../helpers/propz/gardenShape';
 import myPlantsRequest from '../../helpers/data/myPlantsRequests';
 import './GardenItem.scss';
@@ -44,11 +42,11 @@ class GardenItem extends React.Component {
     const { garden } = this.props;
     return (
       <div className='gardensPageContainer'>
-        <ul className='row'>
+        <ul className='your-gardens row'>
           <ul className='container row'>
             <span className='card-body gardenCard' id={garden.id}>
-              <p className='garden-name'>{garden.name}</p>
-              <p className='garden-description'>{garden.description}</p>
+              <p className='garden-name'><b>{garden.name}</b></p>
+              <p className='garden-description'><i>{garden.description}</i></p>
             </span>
           </ul>
           <span className='gardenButtons'>
