@@ -1,6 +1,7 @@
 import React from 'react';
 import SearchField from 'react-search-field';
 import plantRequest from '../../../helpers/data/plantRequest';
+import FindPlantsHeader from '../../../images/FindPlantsHeader2.png';
 import PlantList from '../../PlantList/PlantList';
 import './Plants.scss';
 
@@ -44,6 +45,7 @@ class Plants extends React.Component {
     const { filteredPlants } = this.state;
     return (
       <div className='plantsPage mt-4'>
+      <img src={FindPlantsHeader} alt='find' className='findPlants-div'></img>
         <SearchField
           placeholder="Search Plants..."
           onChange={this.onChange}
