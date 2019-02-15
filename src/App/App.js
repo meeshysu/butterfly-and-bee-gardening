@@ -24,7 +24,7 @@ import './App.scss';
 const PublicRoute = ({ component: Component, authed, ...rest }) => {
   const routeChecker = props => (authed === false
     ? (<Component {...props} />)
-    : (< Redirect to={{ pathname: '/home', state: { from: props.location } }} />));
+    : (< Redirect to={{ pathname: '/plants', state: { from: props.location } }} />));
   return <Route {...rest} render={props => routeChecker(props)} />;
 };
 const PrivateRoute = ({ component: Component, authed, ...rest }) => {
@@ -87,11 +87,11 @@ class App extends React.Component {
             <div className='container'>
               <div className='row'>
                 <Switch>
-                  <Route path='/plants' component={Plants} />
+                  <Route path='/plants' component={Plants} authed={this.state.authed}/>
                   <PrivateRoute path='/gardens/:id/addPlants' component={AddPlants} authed={this.state.authed} />
                   <PrivateRoute path='/gardens/:id' component={GardenDetails} authed={this.state.authed} />
                   <PrivateRoute path='/gardens' component={Gardens} authed={this.state.authed} />
-                  <PrivateRoute path='/home' component={Home} authed={this.state.authed} />
+                  {/* <PrivateRoute path='/home' component={Home} authed={this.state.authed} /> */}
                   <PublicRoute path='/auth' component={Auth} authed={this.state.authed} />
                 </Switch>
               </div>

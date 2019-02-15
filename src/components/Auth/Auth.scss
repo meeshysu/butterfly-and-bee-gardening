@@ -1,24 +1,27 @@
-.about-container {
-  height: 400px;
-  width: auto;
-  text-align: justify;
-  margin: 5%;
-}   
-
 .about-descrip {
-  width: 1200px;
-  margin-top: -6%;
-  margin-left: 9%;
-}
-
-.about-bee-header {
   margin: auto;
-  margin-top: -4%;
+  padding: 2%;
+  width: 98%;
+  text-align: justify;
+  border: black 1px solid;
+  // border-radius: 5px;
 }
 
 .butterfly-frame {
   z-index: -1;
+  margin-top: -2%;
   margin-left: 45%;
+}
+
+.about-bee-header {
+  margin: auto;
+  margin-top: -40%;
+}
+
+.about-bee-descrip {
+  margin-top: -35%;
+  margin-left: 22%;
+  text-align: justify;
 }
 
 .about-butter-header {
@@ -26,22 +29,15 @@
   margin-top: -39%;
 }
 
-.about-bee-descrip {
-  margin-top: -1%;
-  margin-left: 23%;
-  text-align: justify;
-}
-
 .about-butter-descrip {
-  z-index: -1;
+  z-index: -10;
   margin-top: -35%;
-  margin-left: 12%;
+  margin-left: 21%;
   text-align: justify;
 }
 
-.yay-button {
-  margin: auto;
-  margin-top: -8%;
-  padding: 4px;
-  z-index: -1;
+.butterfly-frame-reverse {
+  z-index: -2;
+  margin-top: -1%;
+  margin-right: 35%;
 }

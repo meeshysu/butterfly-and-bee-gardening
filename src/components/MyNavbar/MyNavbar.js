@@ -28,9 +28,9 @@ class MyNavbar extends React.Component {
       if (isAuthed) {
         return (
           <Nav className='ml-auto' navbar>
-            <NavItem>
+            {/* <NavItem>
               <NavLink tag={RRNavLink} to='/Home'>Home</NavLink>
-            </NavItem>
+            </NavItem> */}
             <NavItem>
               <NavLink tag={RRNavLink} to='/Plants'>Plants</NavLink>
             </NavItem>
