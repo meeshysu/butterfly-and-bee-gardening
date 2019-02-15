@@ -1,37 +1,43 @@
-.about-home-descrip {
-  margin: 0;
-  width: auto;
-  text-align: justify;
-}
-
-.about-bee-home-header {
+.about-descrip {
   margin: auto;
-  margin-top: -4%;
+  padding: 2%;
+  width: 98%;
+  text-align: justify;
+  border: black 1px solid;
+  // border-radius: 5px;
 }
 
-.butterfly-home-frame {
+.butterfly-frame {
   z-index: -1;
+  margin-top: -2%;
   margin-left: 45%;
 }
 
-.about-butter-home-header {
+.about-bee-header {
+  margin: auto;
+  margin-top: -40%;
+}
+
+.about-bee-descrip {
+  margin-top: -35%;
+  margin-left: 22%;
+  text-align: justify;
+}
+
+.about-butter-header {
   margin: auto;
   margin-top: -39%;
 }
 
-.about-bee-home-descrip {
-  margin-top: -1%;
-  margin-left: 23%;
-  text-align: justify;
-}
-
-.about-home-butter-descrip {
-  z-index: -1;
+.about-butter-descrip {
+  z-index: -10;
   margin-top: -35%;
-  margin-left: 12%;
+  margin-left: 21%;
   text-align: justify;
 }
 
-.header-home-div {
-  margin-left: -15%;
+.butterfly-frame-reverse {
+  z-index: -2;
+  margin-top: -1%;
+  margin-right: 35%;
 }
