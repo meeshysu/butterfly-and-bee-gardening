@@ -10,7 +10,7 @@ import {
 import authRequests from '../../helpers/data/authRequests';
 import gardenRequest from '../../helpers/data/gardenRequest';
 import AddNewGarden from '../../images/NewGarden.png';
-
+import EditGarden from '../../images/EditGarden.png';
 
 const defaultGarden = {
   uid: '',
@@ -73,7 +73,7 @@ class GardenForm extends React.Component {
     const { isEditing } = this.props;
     const title = () => {
       if (isEditing) {
-        return <h2>Edit Garden</h2>;
+        return <img src={EditGarden} alt='edit-garden' className='editGarden-div'/>;
       }
       return <img src={AddNewGarden} alt='new-garden' className='newGarden-div'/>;
     };
@@ -102,7 +102,7 @@ class GardenForm extends React.Component {
             onChange={this.gardenDescripChange}
           />
         </FormGroup>
-        <Button>Submit</Button>
+        <Button className='garden-submit m-5'>Submit</Button>
       </Form>
     );
   }
