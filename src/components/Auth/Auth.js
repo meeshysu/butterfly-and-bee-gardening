@@ -54,7 +54,7 @@ class Auth extends React.Component {
             </div>
       </div>
       <ul className='d-flex m-auto p-3'>
-        <button className="btn btn-info" onClick={this.authenticateUser}>Login To View Plants & Create A Garden</button>
+        <button className="btn btn-secondary" onClick={this.authenticateUser}>Login To View Plants & Create A Garden</button>
       </ul>
       </div >
     );

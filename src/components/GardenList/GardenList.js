@@ -32,7 +32,6 @@ class GardenList extends React.Component {
 
     return (
       <span className='col'>
-        <h2>Gardens</h2>
         <ul>{gardenItemComponent}</ul>
       </span>
     );
