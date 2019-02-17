@@ -39,9 +39,10 @@ class GardenDetails extends React.Component {
     const { garden, myPlants } = this.state;
     return (
       <div className='gardenPlantsForDetails mx-auto'>
+
         <h3>{garden.name}</h3>
-        <Button className='btn btn-info addPlantButton' onClick={this.passMyPlantsToGarden}>Add A Plant</Button>
-        <Button className='btn btn-info backToGarden m-2' onClick={this.props.history.goBack}>Back To Gardens</Button>
+        <Button className='btn btn addPlantButton' onClick={this.passMyPlantsToGarden}>Add A Plant</Button>
+        <Button className='btn btn backToGarden m-2' onClick={this.props.history.goBack}>Back To Gardens</Button>
         <PlantList plants={myPlants}
         />
       </div>
