@@ -242,7 +242,7 @@ class PlantItem extends React.Component {
           {makeButton()}
           <li className='plant-name'>{plant.name}</li>
           <li className='plant-size'><i>{plant.scientificName}</i></li>
-          <li className='plant-size'>{plant.size}</li>
+          {/* <li className='plant-size'>{plant.size}</li> */}
           <li className='plant-size'>{plant.life}</li>
           <li className='plant-icon'>{sizeIcons()}</li>
           <li className='plant-sun'>{sunIcons()}</li>
