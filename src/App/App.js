@@ -8,7 +8,6 @@ import {
   Redirect,
   Switch,
 } from 'react-router-dom';
-// import connection from '../helpers/data/connection';
 import MyNavbar from '../components/MyNavbar/MyNavbar';
 import Auth from '../components/Auth/Auth';
 import connection from '../helpers/data/connection';
