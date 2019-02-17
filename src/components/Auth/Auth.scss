@@ -1,43 +1,36 @@
+.header-div {
+  margin-bottom: 5%;
+}
+
 .about-descrip {
-  margin: auto;
-  padding: 2%;
-  width: 98%;
   text-align: justify;
   border: black 1px solid;
-  // border-radius: 5px;
 }
 
-.butterfly-frame {
-  z-index: -1;
-  margin-top: -2%;
-  margin-left: 45%;
-}
-
-.about-bee-header {
-  margin: auto;
-  margin-top: -40%;
-}
-
-.about-bee-descrip {
-  margin-top: -35%;
-  margin-left: 22%;
+.about-butter-container {
   text-align: justify;
+  margin-right: 2%;
 }
 
 .about-butter-header {
-  margin: auto;
-  margin-top: -39%;
+  margin-right: 3%;
+  z-index: 1;
 }
 
-.about-butter-descrip {
-  z-index: -10;
-  margin-top: -35%;
-  margin-left: 21%;
+.about-bee-container {
   text-align: justify;
+  margin-left: 2%;
 }
 
-.butterfly-frame-reverse {
-  z-index: -2;
-  margin-top: -1%;
-  margin-right: 35%;
+.about-bee-header {
+  margin-left: 3%;
+}
+
+.black-tail {
+  z-index: -1;
+}
+
+.btn {
+  z-index: 4;
+  margin-right: -118%;
 }
