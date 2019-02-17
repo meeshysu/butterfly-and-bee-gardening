@@ -7,6 +7,7 @@ import plantShape from '../../../helpers/propz/plantShape';
 import PlantItem from '../../PlantItem/PlantItem';
 import smashRequests from '../../../helpers/data/smashRequests';
 import myPlantsRequests from '../../../helpers/data/myPlantsRequests';
+import AddPlantsHeader from '../../../images/AddPlantsHeader.png';
 import './AddPlants.scss';
 
 class AddPlants extends React.Component {
@@ -80,13 +81,6 @@ class AddPlants extends React.Component {
     }
   }
 
-
-  // returnToGardensIDPage = gardenId => this.props.history.push(`/gardens/${gardenId}`);
-
-  // gardenReturn = (gardenId) => {
-  //   this.returnToGardensIDPage(gardenId);
-  // }
-
   render() {
     const {
       gardenId,
@@ -104,14 +98,14 @@ class AddPlants extends React.Component {
 
     return (
       <div className="addPlantsToGardenPage mx-auto">
-        <h3>Add Your Plant Here</h3>
-        <Button className='btn btn-info backToGarden m-2' onClick={this.props.history.goBack}>Back To Garden</Button>
+        <img src={AddPlantsHeader} alt='add-plants-header' className='addPlants-div'></img>
         <SearchField
           placeholder="Search Plants..."
           onChange={this.onChange}
           searchText=""
           classNames="test-class w-50 m-4"
         />
+        <Button className='btn btn backToGarden m-2' onClick={this.props.history.goBack}>Back To Garden</Button>
         <li>{plantItemComponent}</li>
       </div>
     );
