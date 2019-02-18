@@ -156,18 +156,18 @@ class PlantItem extends React.Component {
       }
       if (plant.color === 'Purple, Pink, Red, Orange, White') {
         return (
-          <li>
+          <ul>
           <img src={White} alt='White' className='White-icon'></img>
           <img src={Purple} alt='Purple' className='Purple-icon'></img>
           <img src={Orange} alt='Orange' className='Orange-icon'></img>
           <img src={Pink} alt='Pink' className='Pink-icon'></img>
           <img src={Red} alt='Red' className='Red-icon'></img>
-          </li>
+          </ul>
         );
       }
       if (plant.color === 'All') {
         return (
-          <li>
+          <ul>
           <img src={White} alt='White' className='White-icon'></img>
           <img src={Purple} alt='Purple' className='Purple-icon'></img>
           <img src={Orange} alt='Orange' className='Orange-icon'></img>
@@ -175,61 +175,61 @@ class PlantItem extends React.Component {
           <img src={Red} alt='Red' className='Red-icon'></img>
           <img src={Yellow} alt='Yellow' className='Yellow-icon'></img>
           <img src={Blue} alt='Blue' className='Blue-icon'></img>
-          </li>
+          </ul>
         );
       }
       if (plant.color === 'Purple, Blue') {
         return (
-          <li>
+          <ul>
           <img src={Purple} alt='Purple' className='Purple-icon'></img>
           <img src={Blue} alt='Blue' className='Blue-icon'></img>
-          </li>
+          </ul>
         );
       }
       if (plant.color === 'Purple, Blue, White') {
         return (
-          <li>
+          <ul>
           <img src={Purple} alt='Purple' className='Purple-icon'></img>
           <img src={Blue} alt='Blue' className='Blue-icon'></img>
           <img src={White} alt='White' className='White-icon'></img>
-          </li>
+          </ul>
         );
       }
       if (plant.color === 'Blue, Pink, Purple, White') {
         return (
-          <li>
+          <ul>
           <img src={White} alt='White' className='White-icon'></img>
           <img src={Purple} alt='Purple' className='Purple-icon'></img>
           <img src={Pink} alt='Pink' className='Pink-icon'></img>
           <img src={Blue} alt='Blue' className='Blue-icon'></img>
-          </li>
+          </ul>
         );
       }
       if (plant.color === 'Purple, Orange, Red, Pink') {
         return (
-          <li>
+          <ul>
           <img src={Purple} alt='Purple' className='Purple-icon'></img>
           <img src={Orange} alt='Orange' className='Orange-icon'></img>
           <img src={Pink} alt='Pink' className='Pink-icon'></img>
           <img src={Red} alt='Red' className='Red-icon'></img>
-          </li>
+          </ul>
         );
       }
       if (plant.color === 'Red, Yellow, Orange') {
         return (
-          <li>
+          <ul>
           <img src={Orange} alt='Orange' className='Orange-icon'></img>
           <img src={Red} alt='Red' className='Red-icon'></img>
           <img src={Yellow} alt='Yellow' className='Yellow-icon'></img>
-          </li>
+          </ul>
         );
       }
       if (plant.color === 'Lavender, Purple') {
         return (
-          <li>
+          <ul>
           <img src={Purple} alt='Purple' className='Purple-icon'></img>
           <img src={Lavender} alt='Lavender' className='Lavender-icon'></img>
-          </li>
+          </ul>
         );
       }
       return '';
