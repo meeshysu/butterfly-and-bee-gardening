@@ -224,6 +224,16 @@ class PlantItem extends React.Component {
           </ul>
         );
       }
+      if (plant.color === 'Purple, Blue, White, Red') {
+        return (
+          <ul>
+          <img src={Purple} alt='Purple' className='Purple-icon'></img>
+          <img src={Blue} alt='Blue' className='Blue-icon'></img>
+          <img src={White} alt='White' className='White-icon'></img>
+          <img src={Red} alt='Red' className='Red-icon'></img>
+          </ul>
+        );
+      }
       if (plant.color === 'Lavender, Purple') {
         return (
           <ul>

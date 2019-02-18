@@ -44,7 +44,7 @@
     "description": "Milkweed is one of the Monarch's favorite plants. Not only is it food, it's considered a host plant (where the butterfly creates it's chrysalis). Milkweed has pink to mauve to white flowers. It's easy to grow in medium to wet soils in full sun. Have a ditch that you want to add some spizazz to? Plant some Milkweed and see it take off. Milkweed is a herbaceous perennial that will die during the winter but regrow in the spring. Zones 3-6."
   },
   "plant5": {
-    "image": "http://i67.tinypic.com/2ceg4g9.jpg",
+    "image": "http://i66.tinypic.com/347tels.jpg",
     "scientificName": "Asclepias curassavica",
     "name": "Butterfly Weed",
     "size": "2-3ft T, 1-2ft W",
@@ -218,5 +218,60 @@
     "sun": "Full Sun",
     "color": "Yellow",
     "description": "Black Eyed Susans are hardy plants that grow fast and spread. They are great for big gardens and for attracting bees. Many people plant this alongside Coneflowers. There are many different varieties of this plant, ranging from dwarfs that are around 1 foot to very large ones, like 'Toto' that can be up to 9 feet. Black Eyed Susans are fine with drier soils, not liking to be moist consistently. Like Shasta Daisy's, they will acquire root rot if they stay wet. Once they are established, they will be a very low maintenance plant. They will spread; however, so this will need a larger area to grow. It may be necessary to divide them some after a couple of years. Though with dwarven cultivars, that may not be necessary. Go light on the fertilizer - it will produce weak stems if it has too much. Zones 4 to 9."
+  },
+  "plant21": {
+    "image": "http://i66.tinypic.com/2z7mtyf.jpg",
+    "name": "Spicebush",
+    "scientificName": "Lindera benzoin",
+    "size": "6-12ft T, varies W",
+    "life": "Deciduous shrub",
+    "icon": "5",
+    "sun": "Shade",
+    "color": "Yellow",
+    "description": "The Spicebush plant is a host plant for the Spicebush Swallowtail. These look very similiar to the Eastern Black Swallowtail. It is also a host plant to the Eastern Tiger Swallowtail and the Silkmoth. Spicebush is a large and beautiful shrub that has glossy green leaves that turn yellow during the fall times. It has pretty and frilly like yellow blooms that happen on bare branches. Most people call it the wild 'Forsythia'. Spicebush also produces bright red berries. These berries attract birds. It's a fast growing shrub that likes moist and shady places. Though, a small amount of sun yields a bush with better form amd more berries. Teas can be made out of the leaves and twigs, and the ground up dried berries can be used as a spice, hence it's name! Zones 4 to 9."
+  },
+  "plant22": {
+    "image": "http://i66.tinypic.com/n6cjr6.jpg",
+    "name": "Tulip Poplar",
+    "scientificName": "Liriodendron tulipifera",
+    "size": "70-90ft T, 30-35ft W",
+    "life": "Deciduous tree",
+    "icon": "6",
+    "sun": "Full Sun",
+    "color": "Yellow",
+    "description": "The Tulip Poplar is one of my favorite trees! It is also one of the tallest hardwood trees in Tenenssee and Kentucky. It's also the state tree for us in TN. In May and June, the Poplar tree blooms striking yellow and orange flowers. The leaves come out folded and yellow, growing green with age, only to turn yellow again in the autumn. The Poplar tree is a very large tree, and in the wild could get up to 150ft tall! As great as it is to have in your yard for shade and beauty, the Poplar tree is a great host plant for the Tiger Swallowtail. You'll find Tigers frolicking in your tree before you know it. They are a little sensitive to drought, however, so during the hotter periods during the first couple of years, it's important to set a slow dripping hose at the base of the tree for an hour or two. Zones 4 and up."
+  },
+  "plant23": {
+    "image": "http://i67.tinypic.com/28br39v.jpg",
+    "name": "Passion Vine",
+    "scientificName": "Passiflora caerulea",
+    "size": "Varies, vine",
+    "life": "Perennial vine",
+    "icon": "5",
+    "sun": "Full Sun",
+    "color": "Purple, Blue, White, Red",
+    "description": "The Passion Vine is a beautiful one, with exotic purple, white and blue flowers. The complex blooms of the Passion Flower are host and nectar plants to more than one butterfly. The Gulf Fritillary and Zebra Longwing love to lay their eggs on this winding vine. With good sunlight, heat and humidity, this vine will be trainable to windows, trellises or any other area you'd like it to climb. If you do take it inside for the winter, just make sure that you prune it heavily after flowering. The blooms will appear in Early to late summer. The vine can easily be planted in the ground, or you could leave it in a pot. However, depending on how big of a plant you would like, it's best to plant it in the ground. Zones 6 to 9."
+  },
+  "plant24": {
+    "image": "http://i67.tinypic.com/14aki7r.jpg",
+    "name": "Petunia",
+    "scientificName": "Petunia",
+    "size": "0.75-1ft T, 1-3ft W",
+    "life": "Annual",
+    "icon": "1",
+    "sun": "Full Sun",
+    "color": "All",
+    "description": "Petunia's are a very popular annual plant. They attract many different insects for nectar, such as bees, butterflies and hummingbird moths. They come in a range of different colors, from pastels to bright and bolds, and they can be used in all sorts of arrangements. Most of the time, the gardener will use them in potted plants. They are good spillers, and will do well in a hanging plant or just by itself. The petunia does need to be regularly deadheaded, however, which can be a little bit time consuming. If you like the look of the Petunia, but do not want the deadheading mess, many prefer Callies. They will bloom the entire season up until the first frost. Petunias are also a host plant to the Tiger Swallowtail. They are also a bee's favorite! They are pretty low maintenance, though need regular feeding and sometimes need a heavy cutback in the hotter moments. Zones 10 to 11."
+  },
+  "plant25": {
+    "image": "http://i63.tinypic.com/14nzsj6.jpg",
+    "name": "Parsley",
+    "scientificName": "Petroselinum crispum",
+    "size": "0.75-2ft T, 1-2ft W",
+    "life": "Reseeding Perennial",
+    "icon": "2",
+    "sun": "Full Sun",
+    "color": "White",
+    "description": "Parsley is one of the Eastern Black Swallowtail's favorite host plant, besides Dill. The female butterfly will lay eggs on the plant and the caterpillar will hatch and eat on the herb until it's ready to roam and chrysalis. The Parsley plant is a reseeding perennial, if you let it be. Though, until your caterpillars are done, it's a good idea to cut off the flower heads to prevent that reseeding. If you let the flower go to reseeding, it will then grow lanky and the foliage will stop developing. That is not good for the development of baby caterpillars! Though, it is a good idea, if you want the plant to come back, to at least have one dill plant reseed, or perhaps one head. Parsley has a variety of kinds, as well, such as flat leave or curly. Either one will work as a host plant. It is suggested to plant Parsley alongside Dill for even better caterpillar growth. Zones 4 to 9."
   }
 }
