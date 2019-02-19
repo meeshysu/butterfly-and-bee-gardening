@@ -21,11 +21,15 @@ A user can search for the plant based off of size, sun requirements, color and n
 
 ## Screenshots
 
-<!-- ![home_page](./images/AuthPage1.png)
-![plants_page](./images/PlantsPage1.png)
-![gardens_page](./images/GardensPage1.png)
-![your_plants_page](./images/YourPlants1.png)
-![add_plants_page](./images/AddPlant1.png) -->
+![home_page](/src/images/home.png)
+![plants_page](/src/images/PlantPage1.PNG)
+![plants_page2](/src/images/PlantsPage2.PNG)
+![gardens_page](/src/images/GP1.PNG)
+![gardens_page](/src/images/GP2.PNG)
+![your_plants_page](/src/images/GPD2.PNG)
+![add_plants_page](/src/images/AddPlant.png)
+
+** Disclaimer: The background image of this website does NOT repeat as it does in the screenshots.
 
 ## Check it out: Live Demo
 

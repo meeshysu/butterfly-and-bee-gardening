@@ -156,18 +156,18 @@ class PlantItem extends React.Component {
       }
       if (plant.color === 'Purple, Pink, Red, Orange, White') {
         return (
-          <ul>
+          <li>
           <img src={White} alt='White' className='White-icon'></img>
           <img src={Purple} alt='Purple' className='Purple-icon'></img>
           <img src={Orange} alt='Orange' className='Orange-icon'></img>
           <img src={Pink} alt='Pink' className='Pink-icon'></img>
           <img src={Red} alt='Red' className='Red-icon'></img>
-          </ul>
+          </li>
         );
       }
       if (plant.color === 'All') {
         return (
-          <ul>
+          <li>
           <img src={White} alt='White' className='White-icon'></img>
           <img src={Purple} alt='Purple' className='Purple-icon'></img>
           <img src={Orange} alt='Orange' className='Orange-icon'></img>
@@ -175,84 +175,83 @@ class PlantItem extends React.Component {
           <img src={Red} alt='Red' className='Red-icon'></img>
           <img src={Yellow} alt='Yellow' className='Yellow-icon'></img>
           <img src={Blue} alt='Blue' className='Blue-icon'></img>
-          </ul>
+          </li>
         );
       }
       if (plant.color === 'Purple, Blue') {
         return (
-          <ul>
+          <li>
           <img src={Purple} alt='Purple' className='Purple-icon'></img>
           <img src={Blue} alt='Blue' className='Blue-icon'></img>
-          </ul>
+          </li>
         );
       }
       if (plant.color === 'Purple, Blue, White') {
         return (
-          <ul>
+          <li>
           <img src={Purple} alt='Purple' className='Purple-icon'></img>
           <img src={Blue} alt='Blue' className='Blue-icon'></img>
           <img src={White} alt='White' className='White-icon'></img>
-          </ul>
+          </li>
         );
       }
       if (plant.color === 'Blue, Pink, Purple, White') {
         return (
-          <ul>
+          <li>
           <img src={White} alt='White' className='White-icon'></img>
           <img src={Purple} alt='Purple' className='Purple-icon'></img>
           <img src={Pink} alt='Pink' className='Pink-icon'></img>
           <img src={Blue} alt='Blue' className='Blue-icon'></img>
-          </ul>
+          </li>
         );
       }
       if (plant.color === 'Purple, Orange, Red, Pink') {
         return (
-          <ul>
+          <li>
           <img src={Purple} alt='Purple' className='Purple-icon'></img>
           <img src={Orange} alt='Orange' className='Orange-icon'></img>
           <img src={Pink} alt='Pink' className='Pink-icon'></img>
           <img src={Red} alt='Red' className='Red-icon'></img>
-          </ul>
+          </li>
         );
       }
       if (plant.color === 'Red, Yellow, Orange') {
         return (
-          <ul>
+          <li>
           <img src={Orange} alt='Orange' className='Orange-icon'></img>
           <img src={Red} alt='Red' className='Red-icon'></img>
           <img src={Yellow} alt='Yellow' className='Yellow-icon'></img>
-          </ul>
+          </li>
         );
       }
       if (plant.color === 'Purple, Blue, White, Red') {
         return (
-          <ul>
+          <li>
           <img src={Purple} alt='Purple' className='Purple-icon'></img>
           <img src={Blue} alt='Blue' className='Blue-icon'></img>
           <img src={White} alt='White' className='White-icon'></img>
           <img src={Red} alt='Red' className='Red-icon'></img>
-          </ul>
+          </li>
         );
       }
       if (plant.color === 'Lavender, Purple') {
         return (
-          <ul>
+          <li>
           <img src={Purple} alt='Purple' className='Purple-icon'></img>
           <img src={Lavender} alt='Lavender' className='Lavender-icon'></img>
-          </ul>
+          </li>
         );
       }
       return '';
     };
     return (
       <div className="card-group">
-        <ul className="card">
+        <ul className="card bg-transparent">
           <img className='plant-image' src={plant.image} alt='plant' />
         <ul className='card-body'>
           {makeButton()}
           <li className='plant-name'>{plant.name}</li>
           <li className='plant-size'><i>{plant.scientificName}</i></li>
-          {/* <li className='plant-size'>{plant.size}</li> */}
           <li className='plant-size'>{plant.life}</li>
           <li className='plant-icon'>{sizeIcons()}</li>
           <li className='plant-sun'>{sunIcons()}</li>
